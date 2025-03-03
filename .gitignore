@@ -1,0 +1,6 @@
+.venv
+.vscode
+Pipfile
+__pycache__/
+.pytest_cache/
+tmp*

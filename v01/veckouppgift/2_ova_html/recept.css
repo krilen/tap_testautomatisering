@@ -1,0 +1,27 @@
+body {
+    background-color: beige;
+    margin: 5px
+}
+
+img {
+    width: 800px;
+    height: 300px;
+}
+
+.info {
+    width: 700vw;
+    height: 40vh;
+
+    display: flex;
+}
+
+.ingredienser{
+    width: 300px;
+    height: 100px;
+
+}
+
+.laga{
+    width: 300px;
+    height: 100px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="This page contains all the things I am learning.">
+    <title>My first web page</title>
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <!--
+    Semantic HTML helps to define different sections of a webpage.
+    The 'nav' elemet is a semantic element to group links together for navigation on the
+    page. Can be multiple 'nav' elements on a page but then the different 'nav' elements
+    needs to have different 'aria-label' attribute values.
+    Even 'hr' is a semantic elemet to define changes in the page, different topics.
+    The 'section' element provides even mor meaning.
+
+    Other semantic element are 'header', 'main' and 'footer' to be able to devide a 
+    webpage to it components.
+     * 'header': can be multiple headers but they need to follow the header hierarki.
+     * 'main': Only be per page
+     * 'footer': Like header there can be more than one footer.
+
+    When staring to devide a page with 'main' there is a better way of devided it
+    not with 'section' but with 'article'. The reason is that the elemet is clearly on
+    its own and with 'article' we even point this out than with 'section'. The
+    navigation using the section as the interal navigation still works with 'article'.
+    When to use 'section' vs 'article' is not clearly defined and the debate is ongoing.
+    One way to see it is that 'article' has a CLEAR topic while 'section' is more
+    generic tha can be define somewhere on the page. But there is nothing stopping you
+    to define 'sections' within an 'article'.
+
+    'aside' is another semantic element that is is another complimary section of the
+    page. That is is not as important as what is in the 'main' or 'article' where you
+    are putting it into (related but side text to the main text).
+
+    @02:14:00
+    -->
+    <header>
+        <h1>My goals for the year!</h1>
+        <nav aria-label="primary-navigation">
+            <ul>
+                <li>
+                    <a href="#html">Learning HTML</a>
+                </li>
+                <li>
+                    <a href="#vacation">Plan a vaction</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <article id="html">
+            <h2>I am ready to learn HTML</h2>
+            <p>This is my first web page.</p>
+            <section>
+                <h3>HTML5</h3>
+                <img src="img/html_logo_300x300.png" width="300" height="300" alt="HTML5 Logo" title="HTML5 Logo" />
+                <figure>
+                    <figcaption>An example of HTML5 code</figcaption>
+                    <p>
+                        <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+                    </p>
+                </figure>
+            </section>
+            <section>
+                <h3>My daily schedule</h3>
+                <p>Let me tell you:</p>
+                <ol>
+                    <li>... I learn more about.</li>
+                    <li>... I plan my schedule.</li>
+                    <li>... I use resources from <abbr title="Mozilla Developer Network">
+                        <a href="https://developer.mozilla.org/">MDN</a>
+                    </abbr>.</li>
+                </ol>
+            </section>
+        </article>
+
+        <hr>
+
+        <article id="vacation">
+            <h2>I am also planning a vaction</h2>
+            <p>I have been working hard and need a <em>break</em>.</p>
+            <p>I want to visit a beach.</p>
+
+            <h3>Places I like to Visit</h3>
+            <ul>
+                <li>
+                    <p>I have heard good things about ...</p>
+                    <figure>
+                        <img src="img/caribbean.jpg" width="400" height="225" alt="Caribbean beach" title="Beach" loading="lazy" />
+                        <figcaption>A caribbean beach</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <p>I have heard good things about going here:</p>
+                    <address>Main street</address>
+                    <figure>
+                        <img src="img/vacation.jpg" height="267" width="400" alt="Cancum vaction" title="it's 5 oclock somewhere" loading="lazy" />
+                        <figcaption>A Cancun vacation</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <h3>Places I want to Avoid</h3>
+            <dl>
+                <dt>North Pole</dt>
+                <dd>I have heard that it is <strong>cold</strong> there!</dd>
+
+                <dt>South Pole</dt>
+                <dd>Also a cold place.</dd>
+
+                <dt>Mountain topsSouth Pole</dt>
+                <dd>These are also cold places.</dd>
+            </dl>
+        </article>
+    </main>
+    <hr>
+    <footer>
+    <p>&lt;&lt;&lt; &copy; <a href="about.html">Jack</a> &gt;&gt;&gt;</p>
+    <p><a href="#">Back to top</a></p>
+    </footer>
+</body>
+</html>

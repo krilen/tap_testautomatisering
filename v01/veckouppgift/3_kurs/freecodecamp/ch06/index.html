@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="This page contains all the things I am learning.">
+    <title>My first web page</title>
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <!--
+    The image tag <img> does not have a closing tag and that is why you always should
+    close it using "... />" (self-closing). HTML5 does not care about the closing but
+    React cares and this will cause an error is the img tag is not closed.
+
+    The 'src' attribute is where the image path is added.
+
+    The 'alt' attribute is used to help "assisting" technology such as a screen reader
+    to inform about the image. But the alt text also appears beside a broken image 
+    on the page if the image can not be loaded and displayed.
+
+    The 'title' attribute is used to complement the image, not used by a screen reader
+    since it uses the alt attribute. When you pass over the image the title text
+    appeares.
+
+    The 'width' and 'height' if you only use one of them the image will shift to the
+    new size but keep the ratio of the image. It is recommended to always supply the
+    height and witdh of an image even if CSS can change the size. This to avoid the
+    image shift when the content on the page is loaded. An image without its size
+    will shift around the other elements if it is slow to load. But by providing 
+    the real size from the begining the shigt can be avoided.
+
+    Then there is the 'loading' attribute. This is how the image should be loaded.
+    By default the value for all images loading attribute is set to "eager". 
+    The other value is "lazy". This has all to do with the performance of the page.
+    All images that should be seen when loading a page without scrolling an image
+    be set to the default (eager) so they get loaded as soon as possible. Images 
+    that are not seen (below the fold) without scrolling should be loaded after 
+    and set to "lazy". This makes that the browser will only load the image when
+    it knows that the image is about to be shown.
+
+    There is an element that can contain a image as its content and that is 
+    'figure'. The image is placed in the figuare tag and you can also add 
+    'figcation' the content of this element tells both the browser and assisting
+    technology a cation for the image. The image gets indented and the cation will 
+    appear above (first) or below (last) the image. This do not need to be thesame
+    as the 'alt' attribut value of the image but it should be near each other.
+
+    <figure>
+        <img ...>
+        <figcation>Caption for the image</figcaption>
+    </figure>
+    
+    The figure tag can also contain HTML5 code. The HTML code needs to be
+    inside a 'code' element and it can not be HTML code but only to look like code.
+
+    <figure>
+        <figcaption>An example of HTML5 code</figcaption>
+        <p>
+            <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+        </p>
+    </figure>
+
+
+
+
+-->
+    <h1>My goals for the year!</h1>
+    <hr>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#html">Learning HTML</a>
+            </li>
+            <li>
+                <a href="#vacation">Plan a vaction</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <hr>
+    <section id="html">
+        <h2>I am ready to learn HTML</h2>
+        <p>This is my first web page.</p>
+        <img src="img/html_logo_300x300.png" width="300" height="300" alt="HTML5 Logo" title="HTML5 Logo" />
+        <figure>
+            <figcaption>An example of HTML5 code</figcaption>
+            <p>
+                <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+            </p>
+        </figure>
+        <h3>My daily schedule</h3>
+        <p>Let me tell you:</p>
+        <ol>
+            <li>... I learn more about.</li>
+            <li>... I plan my schedule.</li>
+            <li>... I use resources from <abbr title="Mozilla Developer Network">
+                <a href="https://developer.mozilla.org/">MDN</a>
+            </abbr>.</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section id="vacation">
+        <h2>I am also planning a vaction</h2>
+        <p>I have been working hard and need a <em>break</em>.</p>
+        <p>I want to visit a beach.</p>
+
+        <h3>Places I like to Visit</h3>
+        <ul>
+            <li>
+                <p>I have heard good things about ...</p>
+                <figure>
+                    <img src="img/caribbean.jpg" width="400" height="225" alt="Caribbean beach" title="Beach" loading="lazy" />
+                    <figcaption>A caribbean beach</figcaption>
+                </figure>
+            </li>
+            <li>
+                <p>I have heard good things about going here:</p>
+                <address>Main street</address>
+                <figure>
+                    <img src="img/vacation.jpg" height="267" width="400" alt="Cancum vaction" title="it's 5 oclock somewhere" loading="lazy" />
+                    <figcaption>A Cancun vacation</figcaption>
+                </figure>
+            </li>
+        </ul>
+        <h3>Places I want to Avoid</h3>
+        <dl>
+            <dt>North Pole</dt>
+            <dd>I have heard that it is <strong>cold</strong> there!</dd>
+
+            <dt>South Pole</dt>
+            <dd>Also a cold place.</dd>
+
+            <dt>Mountain topsSouth Pole</dt>
+            <dd>These are also cold places.</dd>
+        </dl>
+    </section>
+    <hr>
+
+    &lt;&lt;&lt; &copy; <a href="about.html">Jack</a> &gt;&gt;&gt;
+    <p><a href="#">Back to top</a></p>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="This page contains all the things I am learning.">
+    <title>My first web page</title>
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <!---
+        The a tag is the ancor tag but without the href attribute it does nothing.
+
+         * A absolute refrence it the full address: https://www...com
+         * A relative refrence is when we link to something on the same server (site)
+           like a picture, another html page or some other local resource.
+         * A internal refrence is when you link to a specific part of the page. This
+           can be used both by the absolute, relative or the page iteself.
+           But to do this you need to specify the parts with the section tag with
+           the attribute id. 
+           After the section you need to create a navigational area using the nav tag.
+           
+            <nav>
+                <a href="#<section_id>"><text></a>
+            </nav>
+            ...
+            <section id="<section_id>">
+                ...
+            </section>
+           
+           All of these tags are all used to provide sematic help for the page
+
+           If you only add a # to the href in the ancor tag you automatically gets
+           a back to the top link
+           ex: <a href="#">Back to top</a>
+
+        Good practices, pointers about a link
+         * Avoid putting the full link as the text of a link
+         * Or use text like "this links to ..." in some way
+         * Keep the link text as short as possible, topic no sentences
+         * Skip the click here text 'To...<a href="...">click here</a>!'
+
+
+        Attributes to a link:
+         * download ('href="..." download>...</a>')
+           Makes the link to be used for downloadning and not as a link. Instead of
+           navigation to the refrence you download it.
+         * mailto ('href="mailto:<email>"...')
+           This will open up the users email client to send an email to the address.
+           But this should be avoided because of the spiders the collects them for spam.
+           Use a contact form instead.
+         * tel ('href="tel:<phonenr>"...')
+           Dail the phone number.
+         * target ('href="..." target="<target_values>">...')
+           This attributes can have different values and informs the bowser how to open
+           the link.
+
+           Target values
+            - nothing (default), no target set: Open in the same window
+            - "_blank": Opens the link in a new tab
+
+         * root or home ('href="/">...')
+           Going to the root or home of the site. normally there should be a index.html
+           at the root / home that you get redirected to and it gets loaded.
+           
+
+    -->
+
+    <h1>My goals for the year!</h1>
+    <hr>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#html">Learning HTML</a>
+            </li>
+            <li>
+                <a href="#vacation">Plan a vaction</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <hr>
+    <section id="html">
+        <h2>I am ready to learn HTML</h2>
+        <p>This is my first web page.</p>
+
+        <h3>My daily schedule</h3>
+        <p>Let me tell you:</p>
+        <ol>
+            <li>... I learn more about.</li>
+            <li>... I plan my schedule.</li>
+            <li>... I use resources from <abbr title="Mozilla Developer Network">
+                <a href="https://developer.mozilla.org/">MDN</a>
+            </abbr>.</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section id="vacation">
+        <h2>I am also planning a vaction</h2>
+        <p>I have been working hard and need a <em>break</em>.</p>
+        <p>I want to visit a beach.</p>
+
+        <h3>Places I like to Visit</h3>
+        <ul>
+            <li><p>I have heard good things about ...</p></li>
+            <li>
+                <p>I have heard good things about going here:</p>
+                <address>Main street</address>
+            </li>
+        </ul>
+        <h3>Places I want to Avoid</h3>
+        <dl>
+            <dt>North Pole</dt>
+            <dd>I have heard that it is <strong>cold</strong> there!</dd>
+
+            <dt>South Pole</dt>
+            <dd>Also a cold place.</dd>
+
+            <dt>Mountain topsSouth Pole</dt>
+            <dd>These are also cold places.</dd>
+        </dl>
+    </section>
+    <hr>
+
+    &lt;&lt;&lt; &copy; <a href="about.html">Jack</a> &gt;&gt;&gt;
+    <p><a href="#">Back to top</a></p>
+</body>
+</html>

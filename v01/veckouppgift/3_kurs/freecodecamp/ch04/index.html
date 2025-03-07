@@ -9,39 +9,71 @@
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-        <h1>Hello world!</h1>
+    <!--
+        There are different types of lists
+        By default a list indents the text it has in its list item (li) tag
 
-        <hr>
+        ol - Orders list
+                Default numerical ordered list.
 
-        <h2>I am ready to learn HTML</h2>
-        <p>This is my first web page.</p>
+        ul - Unordered list
+                Default a dot/bulletpoint
 
-        <h3>My daily schedule</h3>
-        <p>Let me tell you:
-            <br>&nbsp;&nbsp;&nbsp;... I learn more about.
-            <br>&nbsp;&nbsp;&nbsp;... I plan my schedule.
-            <br>&nbsp;&nbsp;&nbsp;... I use resources from <abbr title="Mozilla Developer Network">MDN</abbr>.
-        </p>
+        dl - Description list
+                The description list needs TWO element instead of the single li
+                dt - description term
+                dd - descrition details
 
-        <hr>
+                This list dont use a bullet point of any kind instead it uses the description term
+                then indents the descrition details.
 
-        <h2>I am also planning a vaction</h2>
-        <p>I have been working hard and need a <em>break</em>.</p>
-        <p>I want to visit a beach.</p>
+        Be aware that list indentation can be affected id the list elements includes other elements.
 
-        <h3>Places I like to Visit</h3>
-        <p>I have heard goot things about ...</p>
-        <p>I ahev heard good thid about going here:</p>
-        <address>
-            Main street
-        </address>
+    -->
+    <h1>Hello world!</h1>
 
-        <h3>Places I want to Avoid</h3>
-        <p>Avoid <strong>cold</strong>.</p>
+    <hr>
 
-        <hr>
+    <h2>I am ready to learn HTML</h2>
+    <p>This is my first web page.</p>
 
-        &lt;&lt;&lt; &copy; Jack &gt;&gt;&gt;
-        
-    </body>
+    <h3>My daily schedule</h3>
+    <p>Let me tell you:</p>
+    <ol>
+        <li>... I learn more about.</li>
+        <li>... I plan my schedule.</li>
+        <li>... I use resources from <abbr title="Mozilla Developer Network">MDN</abbr>.</li>
+    </ol>
+
+    <hr>
+
+    <h2>I am also planning a vaction</h2>
+    <p>I have been working hard and need a <em>break</em>.</p>
+    <p>I want to visit a beach.</p>
+
+    <h3>Places I like to Visit</h3>
+    <ul>
+        <li><p>I have heard good things about ...</p></li>
+        <li>
+            <p>I have heard good things about going here:</p>
+            <address>Main street</address>
+        </li>
+    </ul>
+    <h3>Places I want to Avoid</h3>
+    <dl>
+        <dt>North Pole</dt>
+        <dd>I have heard that it is <strong>cold</strong> there!</dd>
+
+        <dt>South Pole</dt>
+        <dd>Also a cold place.</dd>
+
+        <dt>Mountain topsSouth Pole</dt>
+        <dd>These are also cold places.</dd>
+    </dl>
+
+    <hr>
+
+    &lt;&lt;&lt; &copy; Jack &gt;&gt;&gt;
+    
+</body>
 </html>

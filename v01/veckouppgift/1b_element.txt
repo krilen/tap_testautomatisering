@@ -1,8 +1,28 @@
-body
-main
-p
-figure ?
-ul
-sup ?
-a
+<body class="skin--responsive skin-vector skin-vector-search-v...>...</body>
+
+
+
+<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav aria-label="Innehåll" class="vector-toc-landmark">...</main>
+
+
+
+<p><b>Thutmosis II</b>, alternativ stavning är <b>Tuthmosis</b>, <b>Thutmose</b> eller <b>Totmes</b>, var en <a href="/wiki/Fornegyptisk" class="mw-redirect" title="Fornegyptisk">fornegyptisk</a> <a href="/wiki/Farao" title="Farao">farao</a> och den fjärde kungen under den <a href="/wiki/Egyptens_artonde_dynasti" title="Egyptens artonde dynasti">artonde dynastin</a> under <a href="/wiki/Nya_riket" title="Nya riket">Nya riket</a> vars regeringstid var 1492–1479&nbsp;f.Kr. Thutmoses namn i <a href="/wiki/Hieroglyfer" title="Hieroglyfer">hieroglyfer</a> utläses <i>Djehutymes</i>. Namnet betyder "född åt <a href="/wiki/Thoth" class="mw-redirect" title="Thoth">Thoth</a>".
+
+
+
+<ul><li><cite style="font-style:normal" class="book" id="CITEREFSchulz1998">Schulz, Regine (1998). <i><a rel="nofollow" class="external text" href="https://libris.kb.se/bib/8319981">Egypten Faraonernas värld</a></i>. H.F. Ullman. <a href="/wiki/Special:Bokk%C3%A4llor/3-8290-3042-8" title="Special:Bokkällor/3-8290-3042-8">ISBN 3-8290-3042-8</a><span class="printonly">. <a rel="nofollow" class="external free" href="https://libris.kb.se/bib/8319981">https://libris.kb.se/bib/8319981</a></span><span class="reference-accessdate">. Läst 10 maj 2024</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Egypten+Faraonernas+v%C3%A4rld&amp;rft.aulast=Schulz&amp;rft.aufirst=Regine&amp;rft.au=Schulz%2C+Regine&amp;rft.date=1998&amp;rft.pub=H.F.+Ullman&amp;rft.isbn=3-8290-3042-8&amp;rft_id=https%3A%2F%2Flibris.kb.se%2Fbib%2F8319981&amp;rfr_id=info:sid/en.wikipedia.org:Thutmosis_II"><span style="display: none;">&nbsp;</span></span></li></ul>
+
+
+
+
+<table class="wikitable sbstyle succession-box noprint">
+<tbody><tr>
+<td width="30%" rowspan="1">Företrädare:<br><a href="/wiki/Thutmosis_I" title="Thutmosis I">Thutmosis I</a>
+</td>
+<td width="40%" rowspan="1"><a href="/wiki/Farao" title="Farao">Farao</a><br> <a href="/wiki/Egyptens_artonde_dynasti" title="Egyptens artonde dynasti">Artonde dynastin</a><br>
+</td>
+<td width="30%" rowspan="1">Efterträdare:<br><a href="/wiki/Hatshepsut" title="Hatshepsut">Hatshepsut</a>
+</td></tr></tbody></table>
 

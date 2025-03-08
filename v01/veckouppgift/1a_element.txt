@@ -1,6 +1,12 @@
-body
-h1
-h2
-p
-a
+<body class>...</body>
+<h1>HTML<span class="color_h1"> Tutorial</span></h1>
+<h2>Easy Learning with HTML "Try it Yourself"</h2>
+<p>In this HTML tutorial, you will find more than 200 examples. With our online 
+"Try it Yourself" editor, you can edit and test each example yourself!</p>
+<a href="https://my-learning.w3schools.com/" target="_blank" class="ga-featured">
+<picture>
+  <source srcset="/images/mylearning.webp" type="image/webp">
+  <img id="img_mylearning" loading="lazy" src="/images/mylearning.png" alt="Track your progress with at W3Schools.com" style="max-width:100%;">
+</picture>
+</a>
 

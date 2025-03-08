@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="This page contains all the things I am learning.">
+    <title>My first web page</title>
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <!--
+    Table - rows and columns
+    Data can be presented within a table but not the whole page.
+    
+    A table only expands to the size of its content not the whole page as other elements
+    likt 'p', 'ol', ...
+
+     * 'table' is the entire element
+     * 'tr' is a table row within 'table'
+     * 'td' is table data that is within  a 'tr' and can be as many as you wish
+
+    You can also add a table header to the table, by defualt the style will be differert
+    then the style within a 'td'. The default style witin a 'th' is blod and centered.
+    The 'th' can be used both for the columns and rows. But you need to add the attribute
+    'scope' to all 'th' that are used to explain how they relate to the table column or 
+    row.
+
+    ...
+    <table>
+        <tr>
+            <th>&nbsp;</th>           
+            <th scope="col"><table_header_column></th>
+        </tr>
+        <tr>
+            <th scope="row"><table_header_row></th>
+            <td><table_data></td>
+        </tr>
+        <tr>
+            <th scope="row"><table_header_row></th>
+            <td><table_data></td>
+        </tr>
+        ...
+    </table>
+    ...
+
+    The 'td' attribute 'colspan' with a values spans the "cell" into the cells besides it.
+    The 'td' attribute 'rowspan' woth a value spans the "cell" into other cells below it.
+    
+    It is possible to add semantic to a table to make it more useful for assistant tech.
+     * 'caption' adds a "title" to the table 
+     * 'thead' is for semantic use for the header of the 'table'
+     * 'tbody' for the rest of the 'table' body that contains the data. 
+     * 'tfoot' the end of the table that can contain the foot, ending, of the table.
+
+    ...
+    <table>
+        <caption><table_title></caption>
+        <thead>
+            <tr>
+                <th>&nbsp;</th>           
+                <th scope="col"><table_header_column></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><table_header_row></th>
+                <td><table_data></td>
+            </tr>
+            <tr>
+                <th scope="row"><table_header_row></th>
+                <td><table_data></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><table_ending></td>
+            </tr>
+        </tfoot>
+    </table>
+    ...
+
+
+
+
+
+
+    -->
+    <header>
+        <h1>My goals for the year!</h1>
+        <nav aria-label="primary-navigation">
+            <ul>
+                <li>
+                    <a href="#html">Learning HTML</a>
+                </li>
+                <li>
+                    <a href="#vacation">Plan a vaction</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <article id="html">
+            <h2>I am ready to learn HTML</h2>
+            <p>This is my first web page.</p>
+            <section>
+                <h3>HTML5</h3>
+                <img src="img/html_logo_300x300.png" width="300" height="300" alt="HTML5 Logo" title="HTML5 Logo" />
+                <figure>
+                    <figcaption>An example of HTML5 code</figcaption>
+                    <p>
+                        <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+                    </p>
+                </figure>
+            </section>
+            <section>
+                <h3>My daily schedule</h3>
+                <p>Let me tell you:</p>
+                <ol>
+                    <li>... I learn more about.</li>
+                    <li>... I plan my schedule.</li>
+                    <li>... I use resources from
+                        <abbr title="Mozilla Developer Network">
+                            <a href="https://developer.mozilla.org/">MDN</a>
+                        </abbr>
+                    </li>
+                </ol>
+                <aside>
+                    <details>
+                        <summary>Guess the <mark>number of hours</mark> I code per day </summary>
+                        <p><time datetime="PT4H">4 hours</time> per day starting at <time datetime="09:00">9</time> am</p>
+                    </details>
+                </aside>
+                <br>
+                <table>
+                    <caption>My daily schedule</caption>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Morning</th>
+                            <td>
+                                <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
+                            </td>
+                            <td>
+                                Write code
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Break</th>
+                            <td>
+                                <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
+                            </td>
+                            <td>
+                                Eat lunch
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Afternoon</th>
+                            <td>
+                                <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
+                            </td>
+                            <td>
+                                Study for other courses
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Evening</th>
+                            <td rowspan="2">
+                                All other times
+                            </td>
+                            <td>
+                                Free time
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Night</th>
+                            <td>
+                                Sleep
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">And that is what I do every day!</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </article>
+
+        <hr>
+
+        <article id="vacation">
+            <h2>I am also planning a vaction</h2>
+            <p>I have been working hard and need a <em>break</em>.</p>
+            <p>I want to visit a beach.</p>
+            <section>
+            <h3>Places I like to Visit</h3>
+                <ul>
+                    <li>
+                        <p>I have heard good things about ...</p>
+                        <figure>
+                            <img src="img/caribbean.jpg" width="400" height="225" alt="Caribbean beach" title="Beach" loading="lazy" />
+                            <figcaption>A caribbean beach</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>I have heard good things about going here:</p>
+                        <address>Main street</address>
+                        <figure>
+                            <img src="img/vacation.jpg" height="267" width="400" alt="Cancum vaction" title="it's 5 oclock somewhere" loading="lazy" />
+                            <figcaption>A Cancun vacation</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Places I want to Avoid</h3>
+                <dl>
+                    <dt>North Pole</dt>
+                    <dd>I have heard that it is <strong>cold</strong> there!</dd>
+
+                    <dt>South Pole</dt>
+                    <dd>Also a cold place.</dd>
+
+                    <dt>Mountain topsSouth Pole</dt>
+                    <dd>These are also cold places.</dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+    <hr>
+    <footer>
+    <p>&lt;&lt;&lt; &copy; <a href="about.html">Jack</a> &gt;&gt;&gt;</p>
+    <p><a href="#">Back to top</a></p>
+    </footer>
+</body>
+</html>

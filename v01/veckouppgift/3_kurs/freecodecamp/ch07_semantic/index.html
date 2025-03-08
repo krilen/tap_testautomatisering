@@ -36,7 +36,32 @@
     page. That is is not as important as what is in the 'main' or 'article' where you
     are putting it into (related but side text to the main text).
 
-    @02:14:00
+    Inside a aside you can place other semantic elements 'details' and 'summary' with
+    an answer (works togeter). With the details element you can create questions and
+    answers that the user can interact with. With each 'details' you add a a 'summary'
+    and then an answer normally a p element. An arrow/triangel shows up infront of the
+    summary that you can click on to see the answer.
+    
+    ...
+    <details>
+        <summary><question></summary>
+        <p><answer></p>
+    </details>
+    ...
+
+    'mark' is another semantic element that highligths its content, just like a marker.
+
+    Another semantic element is 'time' where you can add a 'datetime' attribute.
+    Different values are allowed. This does not change the webpage in any way but it
+    provides content to a webside reader.
+     * datetime="PTXH": Duration where X in sthe time oin this case hours
+     * datetime="08:00": At 8 in the morning
+
+    A 'div' is an older way of deviding a webpage and is har NOTHING to do with semantic.
+    They are block element to help devide up a page normally using CSS.
+    The same goes with 'span' an inlinee elementt that has no semantic meaning.
+    Both of these does not add any meaning by themself. 
+
     -->
     <header>
         <h1>My goals for the year!</h1>
@@ -72,10 +97,18 @@
                 <ol>
                     <li>... I learn more about.</li>
                     <li>... I plan my schedule.</li>
-                    <li>... I use resources from <abbr title="Mozilla Developer Network">
-                        <a href="https://developer.mozilla.org/">MDN</a>
-                    </abbr>.</li>
+                    <li>... I use resources from
+                        <abbr title="Mozilla Developer Network">
+                            <a href="https://developer.mozilla.org/">MDN</a>
+                        </abbr>
+                    </li>
                 </ol>
+                <aside>
+                    <details>
+                        <summary>Guess the <mark>number of hours</mark> I code per day </summary>
+                        <p><time datetime="PT4H">4 hours/time> per day starting at <time datetime="09:00">9</time> am</p>
+                    </details>
+                </aside>
             </section>
         </article>
 
@@ -85,36 +118,39 @@
             <h2>I am also planning a vaction</h2>
             <p>I have been working hard and need a <em>break</em>.</p>
             <p>I want to visit a beach.</p>
-
+            <section>
             <h3>Places I like to Visit</h3>
-            <ul>
-                <li>
-                    <p>I have heard good things about ...</p>
-                    <figure>
-                        <img src="img/caribbean.jpg" width="400" height="225" alt="Caribbean beach" title="Beach" loading="lazy" />
-                        <figcaption>A caribbean beach</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <p>I have heard good things about going here:</p>
-                    <address>Main street</address>
-                    <figure>
-                        <img src="img/vacation.jpg" height="267" width="400" alt="Cancum vaction" title="it's 5 oclock somewhere" loading="lazy" />
-                        <figcaption>A Cancun vacation</figcaption>
-                    </figure>
-                </li>
-            </ul>
-            <h3>Places I want to Avoid</h3>
-            <dl>
-                <dt>North Pole</dt>
-                <dd>I have heard that it is <strong>cold</strong> there!</dd>
+                <ul>
+                    <li>
+                        <p>I have heard good things about ...</p>
+                        <figure>
+                            <img src="img/caribbean.jpg" width="400" height="225" alt="Caribbean beach" title="Beach" loading="lazy" />
+                            <figcaption>A caribbean beach</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>I have heard good things about going here:</p>
+                        <address>Main street</address>
+                        <figure>
+                            <img src="img/vacation.jpg" height="267" width="400" alt="Cancum vaction" title="it's 5 oclock somewhere" loading="lazy" />
+                            <figcaption>A Cancun vacation</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Places I want to Avoid</h3>
+                <dl>
+                    <dt>North Pole</dt>
+                    <dd>I have heard that it is <strong>cold</strong> there!</dd>
 
-                <dt>South Pole</dt>
-                <dd>Also a cold place.</dd>
+                    <dt>South Pole</dt>
+                    <dd>Also a cold place.</dd>
 
-                <dt>Mountain topsSouth Pole</dt>
-                <dd>These are also cold places.</dd>
-            </dl>
+                    <dt>Mountain topsSouth Pole</dt>
+                    <dd>These are also cold places.</dd>
+                </dl>
+            </section>
         </article>
     </main>
     <hr>

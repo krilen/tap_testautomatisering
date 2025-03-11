@@ -1,0 +1,73 @@
+1a Vilka strängar matchas av det reguljära uttrycket: "ab" ? Testa era svar på https://regex101.com/ 
+ A. "a b"
+ B. "aBBa"
+ C. "sabotör" - match
+
+ > söker bara efter ab och inget annat
+---
+
+1b Betrakta uttrycket "nisse". Vad skriver jag för att matcha både "Nisse", "NISSE" och "nisse"?
+ > regex: [nN][iI][sS]{2}[eE]
+
+---
+
+1c Vilka strängar matchas av "a*n" ?
+ A. "an" - match: ett a sedan ett n
+ B. "amerikan" - match på an i slutet
+ C. "naturlig" - match på n i börjaneftersom det är 0 a innan
+ D. "annandag" - match på de två an i ordet
+
+ > Eftersom * betyder 0 eller flera
+ 
+---
+
+1d Vilka strängar matchas av "[ae]n" ?
+ A. "naiv"
+ B. "inconsequential" - match på en
+ C. "bae"
+ 
+ > Eftersom [ae]n blir an eller en
+
+---
+
+1e Vilka strängar matchas av "je.+e"?
+ A. "je"
+ B. "jee"
+ C. "jeppe" - match
+ D. "je je" -match
+ 
+ > Eftersom . är vilken tecken  som helst och + 1 eller flera.
+   Det betyder att det måste var minst ett teckan mellan e:na.
+
+---
+
+1f Vilka strängar matchas av "\san?\s"
+ A. "sansad"
+ B. " annan "
+ C. "    an   na   an   " - match på två st an
+ D. "be a darling" - match på det ensamma a:et eftersom det sedan är en sträng framför och bakom 
+ 
+ > \s betyder en sträng och space är sträng sedan betyder ? 0 eller 1 tecken med referens till n
+
+---
+1g Skriv ner med egna ord, vad följande uttryck matchar. "Strängar som innehåller…"
+ A. "lines?" => lines, line, liner
+    > Alla ord som börjar med line
+    
+ B. "^a*ö$" => aö, ö, aaaaaaaaaaaaaaaaö
+    > Tack vare * kan det börja med a men behöver det inte. Om det börjar med a kan det sedan
+      vara hur många som helst men det måste sluta med ett ö.
+
+ C. "[aeiouyåäö]+": ae, ab, ö, ån, polkagris 
+    > Letar efter vokaler (små bokstäver), både ord som har vokaler (alla) samt ensamma vokaler
+      som: i, å, och ö. + säger bara att det måste vara ett eller flera vokaler
+
+ D. "[123456789]\d*": 1, 13, 2e, 345624535 
+    > Något som innehåller en siffra 1-9, 0 är inte ok
+      Sedan måste det vara 0 eller flera siffror efter det så det fungerar med en ensam siffra
+      (om det inte är 0)
+    
+ E. "\d{4}-\d{2}-\d{2}": 1111-11-11, 9876-54-32
+    > Nummer i ett visst format, \d är en siffra och {...} är antalet
+    
+

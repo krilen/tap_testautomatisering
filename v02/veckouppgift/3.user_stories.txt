@@ -350,7 +350,7 @@ Senario
   4. Klicka på knappen "Ok we're done!"
   5. Klicka på knappen "Present your work to the product owner during Sprint review"
   6. Klicka på knappen "Ok we're done. Onwards to retrospective"
-  7. Klicka på knappen "End the sprint by evaluationg your work in Sprint retrospective"
+  7. Klicka på knappen "End the sprint by evaluating your work in Sprint retrospective"
   8. Klicka på knappen "The sprint is complete" 
   9. Klicka på "Start over"
  10. Finns underrubriken "What day of the sprint is it?"?

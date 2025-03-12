@@ -15,22 +15,22 @@ X: something else
 
  H: Agile helper (Benämnt som start)
   |
-  + B: First <--------------------------------------+
-  |  |                                              |
-  |  + B: Start over - RESET                        |
-  |  |                                              ^
-  |  + B: Start of the sprint with Sprint planning  |
-  |  |  |                                           |
-  |  |  + H: Sprint planning                        |
-  |  |     + B: OK we're done. Start the sprint -->-+
-  |  |                                              |
-  |  + B: Start every day with Daily standup        |
-  |     |                                           |
-  |     + H: Daily standup                          ^
-  |     + B: Start the standup: 10 minutes          |
-  |     |  + X: Time left (10 min countdown)        |
-  |     |                                           |
-  |     + B: Ok we're done! ---------->-------------+
+  + B: First <----------------------------------------+
+  |  |                                                |
+  |  + B: Start over - RESET                          |
+  |  |                                                ^
+  |  + B: "Start off the sprint with Sprint planning" |
+  |  |  |                                             |
+  |  |  + H: Sprint planning                          |
+  |  |     + B: OK we're done. Start the sprint --->--+
+  |  |                                                |
+  |  + B: "Start every day with Daily stand"          |
+  |     |                                             |
+  |     + H: Daily standup                            ^
+  |     + B: Start the standup: 10 minutes            |
+  |     |  + X: Time left (10 min countdown)          |
+  |     |                                             |
+  |     + B: Ok we're done! ------------>-------------+
   |
   + B: Somewhere in the middle <--------------------+
   |  |                                              |
@@ -73,7 +73,7 @@ X: something else
 ------------------------------------
 Detta är start / första sidan i webbapplikationen
 
-> 1.1: Kommer jag åt webbsidan
+> 
 
 User story
  som en användare 
@@ -117,8 +117,8 @@ Senario
  2. Klicka på knappen "First"
  3. Finns det 3 st knappar?
  4. Finns det en knapp som heter "Start over"?
- 5. Finns det en knapp som heter "Start off the sprint with Sprint planing"?
- 6. Finns det en knapp som heter "Start everyday with  Daily standup"?
+ 5. Finns det en knapp som heter "Start off the sprint with Sprint planning"?
+ 6. Finns det en knapp som heter "Start every day with Daily stand"?
 
 ---
 

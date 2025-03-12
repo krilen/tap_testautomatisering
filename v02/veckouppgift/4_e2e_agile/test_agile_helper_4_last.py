@@ -43,17 +43,22 @@ def test_agile_helper__last_access_daily_standup(page: Page):
     
 
 # 4.3: Kan jag använda timern på "Last / Daily standup"
-#def test_agile_helper__last_daily_standup_timer(page: Page):
-#    """
-#    Can I use the "Daily standup" timer under "Somewhere in the middle"
-#    """
-#    page.goto("https://lejonmanen.github.io/agile-helper/")
-#    page.get_by_role("button").get_by_text(re.compile("Last")).click(timeout=200)
-#    page.get_by_role("button").get_by_text(re.compile("Start every day with Daily standup")).click(timeout=200)
-#    
-#    # Click to start the timer
-#   page.get_by_role("button").get_by_text(re.compile("Start the standup: 10 minutes")).click(timeout=200)
-#    
+def test_agile_helper__last_daily_standup_timer(page: Page):
+    """
+    Can I use the "Daily standup" timer under "Somewhere in the middle"
+    """
+    page.goto("https://lejonmanen.github.io/agile-helper/")
+    page.get_by_role("button").get_by_text(re.compile("Last")).click(timeout=200)
+    page.get_by_role("button").get_by_text(re.compile("Start every day with Daily standup")).click(timeout=200)
+    
+    # Click to start the timer
+    # page.get_by_role("button").get_by_text(re.compile("Start the standup: 10 minutes")).click(timeout=200)
+    
+    #last_daily_timer = page.locator(".framed")
+    
+    # HERE I AM TO FIGURE OUT THE TIMER
+    expect(page.locator(".framed")).to_have_text(["9:49"], timeout=15000)
+
 
 # 4.4: Kan jag göra "Last / Present your work to the product owner during Sprint review"
 def test_agile_helper__last_sprint_review(page: Page):

@@ -122,7 +122,7 @@ Senario
 
 ---
 
-> 2.2: Kommer jag åt "First / Start off the sprint with Sprint planing"
+> 2.2: Kommer jag åt "First / Start off the sprint with Sprint planning"
 
 User story 
  som en användare

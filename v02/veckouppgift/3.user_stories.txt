@@ -321,7 +321,7 @@ Scenario
 
 ---
 
-> 4.5: Kan jag göra "Last / Present your work to the product owner during Sprint review"
+> 4.5: Kan jag göra "Last / End the sprint by evaluationg your work in Sprint retrospective"
 
 User story
  som en användare

@@ -321,7 +321,7 @@ Scenario
 
 ---
 
-> 4.5: Kan jag göra "Last / End the sprint by evaluationg your work in Sprint retrospective"
+> 4.5: Kan jag göra "Last / End the sprint by evaluating your work in Sprint retrospective"
 
 User story
  som en användare
@@ -331,7 +331,7 @@ User story
 Scenario
  1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
  2. Klicka på knappen "Last"
- 3. Klicka på knappen "End the sprint by evaluationg your work in Sprint retrospective"
+ 3. Klicka på knappen "End the sprint by evaluating your work in Sprint retrospective"
  4. Finns rubriken "Sprint retrospective"?
  
 ---

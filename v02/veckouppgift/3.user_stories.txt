@@ -269,9 +269,9 @@ Senario
  2. Klicka på knappen "Last"
  3. Finns det 4 st knappar?
  4. Finns det en knapp som heter "Start over"?
- 5. Finns det en knapp som heter "Start everyday with  Daily standup"?
+ 5. Finns det en knapp som heter "Start every day with Daily standup"?
  6. Finns det en knapp som heter "Present your work to the product owner during Sprint review"?
- 7. Finns det en knapp som heter "End the sprint by evaluationg your work in Sprint retrospective"?
+ 7. Finns det en knapp som heter "End the sprint by evaluating your work in Sprint retrospective"?
 
 ---
 

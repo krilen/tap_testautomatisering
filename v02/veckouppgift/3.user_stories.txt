@@ -1,0 +1,373 @@
+ 3 Öva på user stories
+####################################
+Skapa user stories som beskriver funktionaliteten i https://lejonmanen.github.io/agile-helper/ 
+För varje user story ska du skriva ett scenario. Målet är att all befintlig funktionalitet ska 
+täckas in av en user story - alla knappar ska bli klickade minst en gång.
+Gör gärna den här uppgiften tillsammans med klasskamrater, så ni kan diskutera era scenarion, skillnader
+och likheter.
+
+
+ MAP 'agile-helper'
+====================================
+H: Headline
+B: Button
+X: something else
+
+ H: Agile helper (Benämnt som start)
+  |
+  + B: First <--------------------------------------+
+  |  |                                              |
+  |  + B: Start over - RESET                        |
+  |  |                                              ^
+  |  + B: Start of the sprint with Sprint planning  |
+  |  |  |                                           |
+  |  |  + H: Sprint planning                        |
+  |  |     + B: OK we're done. Start the sprint -->-+
+  |  |                                              |
+  |  + B: Start every day with Daily standup        |
+  |     |                                           |
+  |     + H: Daily standup                          ^
+  |     + B: Start the standup: 10 minutes          |
+  |     |  + X: Time left (10 min countdown)        |
+  |     |                                           |
+  |     + B: Ok we're done! ---------->-------------+
+  |
+  + B: Somewhere in the middle <--------------------+
+  |  |                                              |
+  |  + B: Start over - RESET                        |
+  |  |                                              |
+  |  + B: Start every day with Daily standup        |
+  |     |                                           ^
+  |     + H: Daily standup                          |
+  |     + B: Start the standup: 10 minutes          |
+  |     |  + X: Time left (10 min countdown)        |
+  |     |                                           |
+  |     + B: Ok we're done! ----------->------------+
+  |
+  + H: Last <------------------------------------------------------------+
+     + B: Start over - RESET                                             |
+     |                                                                   |
+     + B: Start every day with Daily standup                             |
+     |  |                                                                ^
+     |  + H: Daily standup                                               |
+     |  + B: Start the standup: 10 minutes                               |
+     |  |  + X: Time left (10 min countdown)                             |
+     |  |                                                                |
+     |  + B: Ok we're done! ------------------>--------------------------+
+     |                                                                   |
+     + B: Present the sprint to the product owner during Sprint review   ^
+     |  |                                                                |
+     |  + H: Sprint review                                               |
+     |  + B: Ok we're done. Onwards to retrospective ---------->---------+
+     |                                                                   |
+     + B: End the sprint by evaluation your work in Sprint retrospective |
+        |                                                                ^
+        + H: Sprint retrospective                                        |
+        + B: The Sprint is complete ------------------>------------------+
+      
+  
+ User stories
+==================================== 
+
+ Del 1
+------------------------------------
+Detta är start / första sidan i webbapplikationen
+
+> 1.1: Kommer jag åt webbsidan
+
+User story
+ som en användare 
+ vill jag kunna komma åt webbsidan
+ så att jag har möjlighet att ta till mig information om vad en sprint är
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Finns rubriken "Agile helper"?
+
+---
+ 
+> 1.2: Kan jag se knappar på webbsidan
+
+User story
+ som en användare
+ vill jag kunna se vad jag skall göra under en sprint
+ så att jag kan läsa på de olika momenten i en sprint beroende vart i sprinten jag är
+
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Finns det 3 st knappar?
+ 3. Finns det en knapp som heter "First"?
+ 4. Finns det en knapp som heter "Somewhere in the middle"?
+ 5. Finns det en knapp som heter "Last"?
+
+
+ Del 2
+------------------------------------
+"First": Detta är första dagen sidan i webbapplikationen
+
+> 2.1: Kommer jag åt "First"
+
+User story
+ som en användare
+ vill jag kunna se hur en sprint börjar
+ så att jag vet vad som skall göras när en ny sprint påböjas
+ 
+Senario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "First"
+ 3. Finns det 3 st knappar?
+ 4. Finns det en knapp som heter "Start over"?
+ 5. Finns det en knapp som heter "Start off the sprint with Sprint planing"?
+ 6. Finns det en knapp som heter "Start everyday with  Daily standup"?
+
+---
+
+> 2.2: Kommer jag åt "First / Start off the sprint with Sprint planing"
+
+User story 
+ som en användare
+ vill jag kunna se vad det som behöver planeras för en sprint
+ så att jag kan läsa på vad som förväntas av mig
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "First"
+ 3. Klicka på knappen "Start off the sprint with Sprint planing"
+ 4. Finns rubriken "Sprint planning"?
+
+---
+ 
+> 2.3: Kommer jag åt "First / Daily standup"
+
+User story
+ som en användare
+ vill jag start en sprint med en Daily standup
+ så att vi börjar en scrum på rätt sätt
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "First"
+ 3. Klicka på knappen "Start every day with Daily standup"
+ 4. Finns rubriken "Daily standup"?
+
+---
+
+> 2.4: Kan jag använda timern på "First / Daily standup"
+
+User story
+ som en användare (scrum master)
+ vill jag begränsa tiden för en Daily standup
+ så att tid inte går förlorade den första dagen
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "First"
+ 3. Klicka på knappen "Start every day with Daily standup"
+ 4. Klicka på knappen "Start the standup: 10 minutes"
+ 5. Säkerställ att "Time left" klockan backar/minskar
+
+---
+
+> 2.5: Kan jag gå tillbaka till "Start" från "First"
+User story
+ som en användare 
+ vill jag efter att ha läst på om "First" i en sprint gå tillbaka 
+ så att jag kan gå till någon annan del av webbsidan med information om en sprint
+
+Senario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "First"
+ 3. Klicka på knappen "Start off the sprint with Sprint planing"
+ 4. Klicka på knappen "Ok we're done. Start the sprint!"
+ 5. Klicka på knappen "Start every day with Daily standup"
+ 6. Klicka på knappen "OK we're done!"
+ 7. Klicka på "Start over"
+ 8. Finns underrubriken "What day of the sprint is it?"?
+
+
+ Del 3
+------------------------------------
+"Somewhere in the middle": Detta är dagar efter den första dagen i webbapplikationen
+
+> 3.1: Kommer jag åt "Somewhere in the middle"
+
+User story
+ som en användare
+ vill jag kunna se vad som händer under en pågående sprint
+ så att jag vet vad som skall göras när väl en sprint är igång
+ 
+Senario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Somewhere in the middle"
+ 3. Finns det 2 st knappar?
+ 4. Finns det en knapp som heter "Start over"?
+ 5. Finns det en knapp som heter "Start everyday with  Daily standup"?
+
+---
+
+> 3.2: Kommer jag åt "Somewhere in the middle / Daily standup"
+
+User story
+ som en användare
+ vill jag under en pågående sprit ha en Daily standup
+ så att information om den pågående sprinten kan delas mellan användarna
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Somewhere in the middle"
+ 3. Klicka på knappen "Start every day with Daily standup"
+ 4. Finns rubriken "Daily standup"?
+
+---
+
+> 3.3: Kan jag använda timern på "Somewhere in the middle  / Daily standup"
+
+User story
+ som en användare (scrum master)
+ vill jag begränsa tiden för en Daily standup
+ så att tid inte förlorads under en pågående sprints dagar
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Somewhere in the middle"
+ 3. Klicka på knappen "Start every day with Daily standup"
+ 4. Klicka på knappen "Start the standup: 10 minutes"
+ 5. Säkerställ att "Time left" klockan backar/minskar
+
+---
+
+> 3.4: Kan jag gå tillbaka till "Start" från "Somewhere in the middle"
+
+User story
+ som en användare 
+ vill jag efter att ha läst på om "Somewhere in the middle" under en pågående sprint 
+ så att jag kan gå till någon annan del av webbsidan med information om en sprint
+
+Senario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Somewhere in the middle"
+ 3. Klicka på knappen "Start every day with Daily standup"
+ 4. Klicka på knappen "OK we're done!"
+ 5. Klicka på "Start over"
+ 6. Finns underrubriken "What day of the sprint is it?"?
+
+
+ Del 4
+------------------------------------
+"Last": Detta är den sista dagen i en sprint i webbapplikationen
+
+> 4.1: Kommer jag åt "Last"
+
+User story
+ som en användare
+ vill jag kunna se vad som händer under en pågående sprint
+ så att jag vet vad som skall göras när väl en sprint är igång
+ 
+Senario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Last"
+ 3. Finns det 4 st knappar?
+ 4. Finns det en knapp som heter "Start over"?
+ 5. Finns det en knapp som heter "Start everyday with  Daily standup"?
+ 6. Finns det en knapp som heter "Present your work to the product owner during Sprint review"?
+ 7. Finns det en knapp som heter "End the sprint by evaluationg your work in Sprint retrospective"?
+
+---
+
+> 4.2: Kommer jag åt "Last / Daily standup"
+
+User story
+ som en användare
+ vill jag den sista dagen av en sprint ha en Daily standup
+ så att information om den avslutande sprinten kan delas mellan användarna
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Last"
+ 3. Klicka på knappen "Start every day with Daily standup"
+ 4. Finns rubriken "Daily standup"?
+
+---
+
+> 4.3: Kan jag använda timern på "Last / Daily standup"
+
+User story
+ som en användare (scrum master)
+ vill jag begränsa tiden för den sista Daily standup
+ så att tid inte förlorads under den sista dagen för sprinten
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Last"
+ 3. Klicka på knappen "Start every day with Daily standup"
+ 4. Klicka på knappen "Start the standup: 10 minutes"
+ 5. Säkerställ att "Time left" klockan backar/minskar
+
+---
+
+> 4.4: Kan jag göra "Last / Present your work to the product owner during Sprint review"
+
+User story
+ som en användare
+ vill jag kunna göra en sprint review
+ så att produkt ägeren blir informerad om vad som har gjorts under denna sprint
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Last"
+ 3. Klicka på knappen "Present your work to the product owner during Sprint review"
+ 4. Finns rubriken "Sprint review"?
+
+---
+
+> 4.5: Kan jag göra "Last / Present your work to the product owner during Sprint review"
+
+User story
+ som en användare
+ vill jag kunna göra en sprint retrospective
+ så att det sker en genomgång med alla användare om hur det har gått under sprinten
+ 
+Scenario
+ 1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+ 2. Klicka på knappen "Last"
+ 3. Klicka på knappen "End the sprint by evaluationg your work in Sprint retrospective"
+ 4. Finns rubriken "Sprint retrospective"?
+ 
+---
+
+> 4.6: Kan jag gå tillbaka till "Start" från "Last"
+
+User story
+ som en användare 
+ vill jag efter att ha läst på om "Last" vid slutet av en sprint 
+ så att jag kan gå till någon annan del av webbsidan med information om en sprint
+
+Senario
+  1. Navigera till webbsidan https://lejonmanen.github.io/agile-helper/
+  2. Klicka på knappen "Last"
+  3. Klicka på knappen "Start every day with Daily standup"
+  4. Klicka på knappen "Ok we're done!"
+  5. Klicka på knappen "Present your work to the product owner during Sprint review"
+  6. Klicka på knappen "Ok we're done. Onwards to retrospective"
+  7. Klicka på knappen "End the sprint by evaluationg your work in Sprint retrospective"
+  8. Klicka på knappen "The sprint is complete" 
+  9. Klicka på "Start over"
+ 10. Finns underrubriken "What day of the sprint is it?"?
+
+---
+
+Done
+
+
+
+
+
+
+
+
+
+
+
+
+
+

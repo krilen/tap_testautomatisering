@@ -169,6 +169,7 @@ Scenario
 ---
 
 > 2.5: Kan jag gå tillbaka till "Start" från "First"
+
 User story
  som en användare 
  vill jag efter att ha läst på om "First" i en sprint gå tillbaka 
@@ -182,7 +183,7 @@ Senario
  5. Klicka på knappen "Start every day with Daily standup"
  6. Klicka på knappen "OK we're done!"
  7. Klicka på "Start over"
- 8. Finns underrubriken "What day of the sprint is it?"?
+ 8. Finns HTML paragraf:en "What day of the sprint is it?"?
 
 
  Del 3

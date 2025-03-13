@@ -56,17 +56,22 @@ def test_agile_helper__first_access_daily_standup(page: Page):
     
     
 # 2.4: Kan jag använda timern på "First / Daily standup"
-#def test_agile_helper__first_daily_standup_timer(page: Page):
-#    """
-#    Can I use the "Daily standup" timer under "First"
-#    """
-#    page.goto("https://lejonmanen.github.io/agile-helper/")
-#    page.get_by_role("button").get_by_text(re.compile("First")).click(timeout=200)
-#    page.get_by_role("button").get_by_text(re.compile("Start every day with Daily standup")).click(timeout=200)
-#    
-#    # Click to start the timer
-#   page.get_by_role("button").get_by_text(re.compile("Start the standup: 10 minutes")).click(timeout=200)
-#    
+def test_agile_helper__first_daily_standup_timer(page: Page):
+    """
+    Can I use the "Daily standup" timer under "First"
+    """
+    page.goto("https://lejonmanen.github.io/agile-helper/")
+    page.get_by_role("button").get_by_text(re.compile("First")).click(timeout=200)
+    page.get_by_role("button").get_by_text(re.compile("Start every day with Daily standup")).click(timeout=200)
+    
+    # Click to start the timer
+    page.get_by_role("button").get_by_text(re.compile("Start the standup: 10 minutes")).click(timeout=200)
+    
+    # UGLY - do not think it is the right way to go!!!
+    page.wait_for_timeout(12000) # Wait for 12 sec
+    first_daily_timer = page.locator(".framed") # timer text from the class named .framed
+
+    expect(first_daily_timer).to_have_text(re.compile("9:4[0-9]"), timeout=200) # Valid timer text is 9:49 to 9:40
  
  
 # 2.5: Kan jag gå tillbaka till "Start" från "First"

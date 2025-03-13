@@ -41,17 +41,23 @@ def test_agile_helper__middle_access_daily_standup(page: Page):
     
 
 # 3.3: Kan jag använda timern på "Somewhere in the middle / Daily standup"
-#def test_agile_helper__middle_daily_standup_timer(page: Page):
-#    """
-#    Can I use the "Daily standup" timer under "Somewhere in the middle"
-#    """
-#    page.goto("https://lejonmanen.github.io/agile-helper/")
-#    page.get_by_role("button").get_by_text(re.compile("Somewhere in the middle")).click(timeout=200)
-#    page.get_by_role("button").get_by_text(re.compile("Start every day with Daily standup")).click(timeout=200)
-#    
-#    # Click to start the timer
-#   page.get_by_role("button").get_by_text(re.compile("Start the standup: 10 minutes")).click(timeout=200)
-#    
+def test_agile_helper__middle_daily_standup_timer(page: Page):
+    """
+    Can I use the "Daily standup" timer under "Somewhere in the middle"
+    """
+    page.goto("https://lejonmanen.github.io/agile-helper/")
+    page.get_by_role("button").get_by_text(re.compile("Somewhere in the middle")).click(timeout=200)
+    page.get_by_role("button").get_by_text(re.compile("Start every day with Daily standup")).click(timeout=200)
+    
+    # Click to start the timer
+    page.get_by_role("button").get_by_text(re.compile("Start the standup: 10 minutes")).click(timeout=200)
+    
+    # UGLY - do not think it is the right way to go!!!
+    page.wait_for_timeout(12000) # Wait for 12 sec
+    middle_daily_timer = page.locator(".framed") # timer text from the class named .framed
+
+    expect(middle_daily_timer).to_have_text(re.compile("9:4[0-9]"), timeout=200) # Valid timer text is 9:49 to 9:40
+
 
 # 3.4: Kan jag gå tillbaka till "Start" från "Somewhere in the middle"
 def test_agile_helper__middle_return_start(page: Page):

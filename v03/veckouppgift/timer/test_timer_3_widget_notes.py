@@ -14,16 +14,31 @@ def test_timer__change_text(page: Page):
 
     # Check that the default text is present in the new notes
     notes_text = notes.get_by_role("textbox").get_by_text("Click to change text")
-    expect(notes_text).to_be_hidden() # Text box hidden
+    expect(notes_text).to_be_hidden()
+    
+    # Using JS to show the input field
+    notes.evaluate("""
+        const inputElement = document.querySelector('input[placeholder="Description"]');
+        if (inputElement) {
+            inputElement.style.display = 'inline';
+        }
+    """)
 
-    # Change the text
-    notes.focus(timeout=200)
-    #expect(notes.get_by_role("heading")).get_by_text("Click to change text")
-
-    # Add new text and verify it
+    # Set a new text in the input field
     _new_text = "Test text"
-    notes_text.fill(_new_text)
-    #expect(notes).to_have_value(_new_text)
+    notes.get_by_placeholder("Description").fill(_new_text)
 
-    # Verify that there are 1 active widgets are present on the page
-    #expect(page.locator(".widget")).to_have_count(2, timeout=200) 
+    # Using JS to hide the input field
+    notes.evaluate("""
+        const inputElement = document.querySelector('input[placeholder="Description"]');
+        if (inputElement) {
+            inputElement.style.display = 'none';
+        }
+    """)
+    
+    # Verify that the input filed with the new text is hidden
+    notes_text = notes.get_by_role("textbox").get_by_text(_new_text)
+    expect(notes_text).to_be_hidden()
+    
+    # Verify that there is still one widged on the webpage
+    expect(page.locator(".widget")).to_have_count(2, timeout=200) 

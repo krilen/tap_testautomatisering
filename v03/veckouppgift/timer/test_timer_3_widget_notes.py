@@ -13,10 +13,10 @@ def test_timer__change_text(page: Page):
     notes = page.locator(".widget").nth(1)
 
     # Check that the default text is present in the new notes
-    notes_text = notes.get_by_role("textbox").get_by_text("Click to change text")
-    expect(notes_text).to_be_hidden()
+    notes_before_text = notes.get_by_role("textbox").get_by_text("Click to change text")
+    expect(notes_before_text).to_be_hidden()
     
-    # Using JS to show the input field
+    # Using JS to show the input field for notes
     notes.evaluate("""
         const inputElement = document.querySelector('input[placeholder="Description"]');
         if (inputElement) {
@@ -24,11 +24,11 @@ def test_timer__change_text(page: Page):
         }
     """)
 
-    # Set a new text in the input field
+    # Set a new text in the input field for notes
     _new_text = "Test text"
     notes.get_by_placeholder("Description").fill(_new_text)
 
-    # Using JS to hide the input field
+    # Using JS to hide the input field for notes
     notes.evaluate("""
         const inputElement = document.querySelector('input[placeholder="Description"]');
         if (inputElement) {
@@ -37,8 +37,8 @@ def test_timer__change_text(page: Page):
     """)
     
     # Verify that the input filed with the new text is hidden
-    notes_text = notes.get_by_role("textbox").get_by_text(_new_text)
-    expect(notes_text).to_be_hidden()
+    notes_text_after = notes.get_by_role("textbox").get_by_text(_new_text)
+    expect(notes_text_after).to_be_hidden()
     
     # Verify that there is still one widged on the webpage
     expect(page.locator(".widget")).to_have_count(2, timeout=200) 

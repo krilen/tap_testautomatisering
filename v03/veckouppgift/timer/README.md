@@ -11,6 +11,14 @@
 - ändra texten för anteckning
 - ändra temafärg
 
+Extra
+
+- ändra nman på timers
+- ändra så att timern räknar upp
+- använd "clock" för att köra ner timern till 00:05 för att säkerställa
+  - rosa färg
+  - minus på klockan
+
 ---
 
 ## User Stories
@@ -100,6 +108,23 @@ OBS!!! Det finns alltid en widget på webbsidan från början, ligger först och
 05. Kontrollera att timern ligger överst  
 06. Kontrollera att 2 stycken widgets finns på webbsidan
 
+**TS04** (US04.AC01 och US04.AC02)  
+01. Klicka på knappen för att lägga till en timer  
+02. Kontrollera att standard tiden är 15:00 minuter  
+03. Ändra tiden till 01:00 minuter  
+04. Kontrollera att den nya tiden är 01:00 minuter och att det bara finns en timer  
+05. Kontrollera att det bara finns 1 widget finns på webbsidan
+
+**TS05** (US05.AC01)  
+01. Klicka på knappen för att lägga till en timer  
+02. Kontrollera att standard tiden är 15:00 minuter  
+03. Starta timern  
+04. Vänta i 10 sekunder  
+05. Stoppa timern  
+06. Kontrollera att tiden har ändrat  
+07. Återställ timern  
+08. Kontrollera att standard tiden är 15:00 minuter
+
 **TS06** (US06.AC01)  
 01. Klicka på knappen för att lägga till en anteckning  
 02. Kontrollera att standard texten, "Click to change text", är satt i anteckningen  
@@ -108,3 +133,6 @@ OBS!!! Det finns alltid en widget på webbsidan från början, ligger först och
 05. Göm "input field"  
 04. Kontrollera att anteckningen har fått det nya texten  
 05. Kontrollera att det bara finns 1 widget finns på webbsidan
+
+**TS07** (US07.AC01)  
+01. Kont....

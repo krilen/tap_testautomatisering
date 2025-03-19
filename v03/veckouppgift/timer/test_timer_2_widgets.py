@@ -7,7 +7,7 @@ def test_timer__add_remove_widgets(page: Page):
     page.goto("https://lejonmanen.github.io/timer-vue/")
 
     # Verify that no active widgets are present on the page
-    expect(page.locator(".widget")).to_have_count(1, timeout=200)   
+    expect(page.locator(".widget")).to_have_count(1, timeout=200)
 
     # Add notes and timer widget
     page.get_by_role("button").get_by_text(re.compile("note", re.IGNORECASE)).click(timeout=200)
@@ -22,7 +22,7 @@ def test_timer__add_remove_widgets(page: Page):
     widget_close.first.click(timeout=200)
 
     # Verify that no active widgets are present on the page
-    expect(page.locator(".widget")).to_have_count(1, timeout=200)   
+    expect(page.locator(".widget")).to_have_count(1, timeout=200)
 
 
 # TS03

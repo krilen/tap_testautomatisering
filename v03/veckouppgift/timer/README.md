@@ -78,7 +78,7 @@ så att jag kan anpassa webbsidan efter behov
 
 **US06.AC01**: Lägg till en anteckning och ändra texten
 
-**US07.AC01**: Klicka på knapparna för att ändra färgen på webbsidan
+**US07.AC01**: Kontrollera de olika definerade theme knapparna på webbsidan så att theme ändras och knappen blir "selected"
 
 ---
 
@@ -135,4 +135,8 @@ OBS!!! Det finns alltid en widget på webbsidan från början, ligger först och
 05. Kontrollera att det bara finns 1 widget finns på webbsidan
 
 **TS07** (US07.AC01)  
-01. Kont....
+01. Kontrollera att antalet theme knappar som är definerade stämmer med det förväntade antalet  
+02. För varje knapp   
+    * Klicka på den valda theme knappen  
+    * Kontrollera att rätt "theme" på webbsidan aktiveras  
+    * Kontrollera att knappen blir "selected"  

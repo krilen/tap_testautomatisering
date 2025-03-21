@@ -15,7 +15,6 @@ def test_timer__theme(page: Page):
     # Check each defined theme button
     for theme_button in possible_themes:
         button = page.get_by_role("button").get_by_text(re.compile(theme_button[0], re.IGNORECASE))
-
         button.click(timeout=200)
 
         # Verify the html 'data-theme' when the button is clicked

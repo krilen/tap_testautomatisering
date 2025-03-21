@@ -58,6 +58,11 @@ som en användare
 vill jag kunna ändra färgern på webbsidan  
 så att jag kan anpassa webbsidan efter behov
 
+**US08**
+Som en användare
+vill jag kunna ändra rubriken på en timer
+så att det framgår vad den är till för
+
 ---
 
 ## Acceptanskriterier
@@ -79,6 +84,9 @@ så att jag kan anpassa webbsidan efter behov
 **US06.AC01**: Lägg till en anteckning och ändra texten
 
 **US07.AC01**: Kontrollera de olika definerade theme knapparna på webbsidan så att theme ändras och knappen blir "selected"
+
+**US08.AC01**: När en timer har skapas skall standard rubriken vara "Break"
+**US08.AC02**: Rubriken på en timer skall kunna ändras
 
 ---
 
@@ -140,3 +148,10 @@ OBS!!! Det finns alltid en widget på webbsidan från början, ligger först och
     * Klicka på den valda theme knappen  
     * Kontrollera att rätt "theme" på webbsidan aktiveras  
     * Kontrollera att knappen blir "selected"  
+
+**TS08** (US08.AC01 och US08.AC02)  
+01. Klicka på knappen för att lägga till en timer  
+02. Kontrollera att standard rubriken vid en ny timer är "Break"  
+03. Klicka på rubriken (inkl pennen) för att ett input fält skall dyka upp  
+04. Ändra på rubriken till "Test"  
+05. Kontrollera att den nya rubriken finns på timern  

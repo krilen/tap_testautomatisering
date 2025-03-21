@@ -85,7 +85,7 @@ så att det framgår vad den är till för
 
 **US07.AC01**: Kontrollera de olika definerade theme knapparna på webbsidan så att theme ändras och knappen blir "selected"
 
-**US08.AC01**: När en timer har skapas skall standard rubriken vara "Break"
+**US08.AC01**: När en timer har skapas skall standard rubriken vara "Break"  
 **US08.AC02**: Rubriken på en timer skall kunna ändras
 
 ---

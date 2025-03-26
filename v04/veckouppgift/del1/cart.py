@@ -4,8 +4,11 @@
 class Cart():
     def __init__(self):
         self.cart = []
-        #self.cart_value = 0
 
+
+    def is_empty(self):
+        return not self.cart
+    
 
     def add_book(self, book, price):   
         for item in self.cart:
@@ -17,13 +20,10 @@ class Cart():
         else:
             self.cart.append({"name": book, "price": price, "count": 1})
 
-        print(self.cart)
 
+    def list_book(self):
+        return self.cart
 
-
-    def is_empty(self):
-        return not self.cart
-    
 
     def remove_book(self, book):
         remove_item = 0
@@ -52,11 +52,9 @@ class Cart():
         return sum([item["count"] * item["price"] for item in self.cart])
 
 
-    def __del__(self):
+    def delete_books(self):
         self.cart.clear()
-        self.cart_value = 0
 
-    
 
 if __name__ == "__main__":
     cart = Cart()

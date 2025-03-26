@@ -55,7 +55,7 @@ class Cart():
     def delete_books(self):
         self.cart.clear()
 
-
+"""
 if __name__ == "__main__":
     cart = Cart()
 
@@ -97,3 +97,4 @@ if __name__ == "__main__":
     print(f"Number of books: {cart.nr_of_books()}")
     print(f"Number of unique books: {cart.nr_of_unique_books()}")
     print(f"Total amount: {cart.amount()}")
+"""

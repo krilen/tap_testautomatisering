@@ -21,7 +21,7 @@ Feature: Handle shopping cart
             | item_id | price  | count |
             | 124     | 899.99 | 1     |
             | 125     | 249.99 | 1     |
-            | 136     | 499.99 | 1     |
+            | 132     | 499.99 | 1     |
         Then the user can see the number of items and the total amount to pay for the items in the shopping cart
 
 
@@ -41,7 +41,7 @@ Feature: Handle shopping cart
             | item_id | price  | count |
             | 124     | 899.99 | 1     |
             | 125     | 249.99 | 1     |
-            | 136     | 499.99 | 1     |
+            | 132     | 499.99 | 1     |
         And chooses to delete them all at once
         Then the user can see that the shopping cart is empty
 
@@ -62,7 +62,7 @@ Feature: Handle shopping cart
             | 64000 |
 
 
-    Scenario Outline: The user buys items and the number of items availblefor purchase is verified against the inventory
+    Scenario Outline: The user buys items and the number of items available for purchase is verified against the inventory
         Given that a shopping cart is present        
         When item are added to the shopping cart with a different <count>
             | item_id | price  |

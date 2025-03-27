@@ -1,16 +1,16 @@
 from cart import Cart
-from inventory import Inventory
+from products import Products
 
 
-def view_items(inventory, cart):
+def view_items(products, cart):
     
     while True:
         
         print()
         print(" Items that can be bought")
         
-        for i, product in enumerate(inventory.products, start=1):
-            print(f"  - {i}. {product["title"]} (${product["price"]})")
+        for i, _product in enumerate(products.products, start=1):
+            print(f"  - {i}. {_product["title"]} (${_product["price"]})")
                 
 
         print()
@@ -55,7 +55,7 @@ def view_cart(cart):
 
 def main():
     
-    inventory = Inventory()
+    products = Products()
     cart = Cart()
     
     while True:
@@ -70,7 +70,7 @@ def main():
         
         match command:
             case "i":
-                view_items(inventory, cart)
+                view_items(products, cart)
                 
             case "c":
                 view_cart(cart)

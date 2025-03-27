@@ -1,6 +1,6 @@
 from api import Api
 
-class Inventory():
+class Products():
     
     def __init__(self) -> None:
         self._products = []
@@ -27,7 +27,7 @@ class Inventory():
 
     def product(self, id):
         return [ p for p in self.products if p["id"] == id ]
-    
 
-if __name__ == "__main__":  
+
+if __name__ == "__main__":
     print("Wrong file")

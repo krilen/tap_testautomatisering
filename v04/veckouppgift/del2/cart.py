@@ -1,4 +1,4 @@
-from inventory import Inventory
+from products import Products
 
 class Cart():
     def __init__(self):
@@ -70,10 +70,24 @@ class Cart():
         """
         return self.shopping_cart["items"]
     
+    @property
+    def list_cart(self):
+        return self.shopping_cart
+
 
     @property
     def recalculate_cart(self):
-        pass
+        """
+        After modification of the items, values based on them needs to be recalculated
+        """
+        items = self.list_items
+        
+        self.shopping_cart["count_unique"] = len(items)
+        self.shopping_cart["count_total"] = sum([item["count"] for item in items])
+        self.shopping_cart["amount"] = sum([round((item["count"] *item["price"]), 2) for item in items])
+        
+        if self.nr_of_items > 3:
+            self.shopping_cart["discount"] = round((self.amount_for_items *0.1), 2)
 
 
     def add_item(self, product_id, count=1):
@@ -82,14 +96,15 @@ class Cart():
         """
         if not isinstance(product_id, int):
             return False, "not a valid product id"
+        
+        if not isinstance(count, int):
+            return False, "not a valid count"
 
         if count < 1:
-            return False, "only positive number of products can be ordered"
+            return False, "only positive number for products count"
 
-        inventory = Inventory()
-        product = inventory.product(product_id)
-
-        print(product)
+        products = Products()
+        product = products.product(product_id)
 
         if not product:
             return False, "product not found"
@@ -111,61 +126,58 @@ class Cart():
                 if item["product_id"] == product_id:
                     if item["count"] +count > product["stock"]:
                         count = product["stock"] -item["count"]
+                        product_stock_enough = False
 
-                    item["count"] = count
-                    item["price"] = product["price"]                        # Update the price just in case
-                    item["total_price"] = item["count"] * product["price"] 
+                    item["count"] = item["count"] +count
+                    item["price"] = product["price"] # Update the price just in case
+                    item["total_price"] = round(item["count"] * product["price"], 2) 
                     break
 
             else:
                 self.shopping_cart["items"].append({"product_id": product_id, 
                                                     "price":product["price"], 
                                                     "count": count, 
-                                                    "total_price": count * product["price"]
+                                                    "total_price": round(count * product["price"], 2)
                                                     })
 
+        self.recalculate_cart
+        
         if not product_stock_enough:
-            return product_stock_enough, "the count for the cart has changed"
+            return False, "the count for the cart has changed"
         
         return True, "product added to the cart"
 
 
-        
-
-
-
-
-    def remove_item(self, item_id):
+    def remove_item(self, product_id, count=1):
         """
         Remove an item in the shopping cart either
          * reduce the number of the same item
          * remove the item
         """
+        if not isinstance(product_id, int):
+            return False, "not a valid product id"
+        
+        if not isinstance(count, int):
+            return False, "not a valid count"
+        
         remove_item = 0
 
-        for i, cart in enumerate(self.shopping_cart, start=1):
-
-            if cart["product_id"] == item_id and cart["count"] > 1:
-                cart["count"] -= 1
-
-            elif cart["product_id"] == item_id and cart["count"] == 1:
-                 remove_item = i
+        for i, cart in enumerate(self.list_items, start=1):
+            
+            if cart["product_id"] == product_id and (count == 0 or cart["count"] == 1 or cart["count"] <= count):
+                remove_item = i
+                
+            elif cart["product_id"] == product_id and cart["count"] > 1:
+                cart["count"] -= count
 
         if remove_item:
-            self.shopping_cart.pop(remove_item -1)
+            self.list_items.pop(remove_item -1)
+            self.recalculate_cart
+            return True, "the product was removed from the cart"
+            
+        self.recalculate_cart
+        return True, "reduced the count of the product id in the cart"
 
 
 if __name__ == "__main__":
-
-    c = Cart()
-    print(c.is_empty)
-
-    resp = c.add_item(124)
-
-    print(resp)
-
-    # HERE I AM
-
-    print(c.is_empty)
-
-    #print("Wrong file")
+    print("Wrong file")

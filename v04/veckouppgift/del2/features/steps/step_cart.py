@@ -37,6 +37,7 @@ def step_then_shopping_cart_is_empty(context):
 def step_when__add_items_to_cart(context):
     context.items = []
     context.sum_of_prices = 0.0
+    context.infostatus = ""
 
     for row in context.table:
         item = int(row["item_id"])
@@ -74,7 +75,7 @@ def step_then__verify_count_of_each_item(context):
         elif item_count_found > 0:
             unique_items[item_id] = item_count_found +item_count
             
-    for item in context.cart.list_items():
+    for item in context.cart.list_items:
         assert (unique_items[item["product_id"]] == item["count"]), "Number of unique items are NOT correct in the shopping cart"
 
 
@@ -92,8 +93,11 @@ def step_when__items_added_to_cart_with_count(context, count):
         item_id2 = int(row["item_id"])
         price2 = float(row["price"])
 
-    context.cart.add_item(item_id2, count)
+    _status, _msg = context.cart.add_item(item_id2, count)
     
+    if not _status:
+        count = context.cart.nr_of_items
+  
     context.items = []
 
     for _ in range(count):

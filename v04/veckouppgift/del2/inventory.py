@@ -29,13 +29,5 @@ class Inventory():
         return [ p for p in self.products if p["id"] == id ]
     
 
-if __name__ == "__main__":
-    i = Inventory()
-    
-    print(i.products)
-    
-    print(i.products_id)
-    
-    print(i.product(143))
-    
+if __name__ == "__main__":  
     print("Wrong file")

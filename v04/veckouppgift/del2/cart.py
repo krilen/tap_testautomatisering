@@ -5,8 +5,8 @@ class Cart():
         """
         Setup of the shopping cart
         """
+        # {"cart":[{"product_id": ?, "product_name": "?", "count": ?, "price": ?, "total_price": ?}], "product_count": ?, "total_count": ?, "amount": ?, "discount": ?}
         self.shopping_cart = []
-        self.inventory = Inventory()
 
     @property
     def is_empty(self):
@@ -41,6 +41,18 @@ class Cart():
 
 
     @property
+    def amount_discount(self):
+        """
+        The discount for buying more than 3 items
+        """
+        if self.nr_of_items > 3:
+            return round((self.amount_for_items *0.1), 2)
+
+        else:
+            return 0
+
+
+    @property
     def delete_all_items(self):
         """
         Delete all items in the shopping cart
@@ -48,18 +60,36 @@ class Cart():
         self.shopping_cart.clear()
 
 
-    def add_item(self, item_id, price):
+    @property
+    def check_item_inventory(self):
+        """
+        Method that verifies the count from the inventory and the count 
+        that the user want to buy.
+        If needed adjusts the shopping cart to reflect the actual count in the inventory
+        and informs the use about the readjustment
+        """
+        for item in self.list_items():
+
+            print(item)
+
+
+
+    def add_item(self, item_id, count=1):
         """
         Add an item and its price to the shopping cart
         """
-        for cart in self.shopping_cart:
-            
-            if cart["product_id"] == item_id:
-                cart["count"] += 1
-                break
+        if count > 0:
+            inventory = Inventory()
+            item = inventory.product(item_id)
 
-        else:
-            self.shopping_cart.append({"product_id": item_id, "price": price, "count": 1})
+            for cart in self.shopping_cart:
+                if cart["product_id"] == item_id:
+                    cart["count"] += count
+                    break
+
+            else:
+                if item:
+                    self.shopping_cart.append({"product_id": item_id, "price": item[0]["price"], "count": count})
 
 
     def list_items(self):
@@ -90,4 +120,14 @@ class Cart():
 
 
 if __name__ == "__main__":
+
+    c = Cart()
+    c.add_item(124)
+    c.add_item(124, 10)
+    c.add_item(124)
+
+    print(c.is_empty)
+
+    c.check_item_inventory
+
     print("Wrong file")

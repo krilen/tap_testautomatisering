@@ -5,15 +5,21 @@ class Cart():
         """
         Setup of the shopping cart
         """
-        # {"cart":[{"product_id": ?, "product_name": "?", "count": ?, "price": ?, "total_price": ?}], "product_count": ?, "total_count": ?, "amount": ?, "discount": ?}
-        self.shopping_cart = []
+        self.shopping_cart = {"items": [],
+                              "count_unique": 0, 
+                              "count_total": 0,
+                              "amount": 0,
+                              "discount": 0
+                              }
+        
+        # {"items:[{"product_id": ?, "price": ?, "count": ?, "total_price": ?}, ...], ..."}
 
     @property
     def is_empty(self):
         """
         Check to see if the shopping cart is empty
         """
-        return not self.shopping_cart
+        return not self.shopping_cart["items"]
 
 
     @property
@@ -21,7 +27,7 @@ class Cart():
         """
         Number of items in the shopping cart
         """
-        return sum([item["count"] for item in self.shopping_cart])
+        return self.shopping_cart["count_total"]
 
 
     @property
@@ -29,7 +35,7 @@ class Cart():
         """
         Number of unique items in the shopping cart
         """
-        return len(self.shopping_cart)
+        return self.shopping_cart["count_unique"]
 
 
     @property
@@ -37,7 +43,7 @@ class Cart():
         """
         The total amount for the items in the shopping cart
         """
-        return sum([item["count"] * item["price"] for item in self.shopping_cart])
+        return self.shopping_cart["amount"]
 
 
     @property
@@ -45,11 +51,7 @@ class Cart():
         """
         The discount for buying more than 3 items
         """
-        if self.nr_of_items > 3:
-            return round((self.amount_for_items *0.1), 2)
-
-        else:
-            return 0
+        return self.shopping_cart["discount"]
 
 
     @property
@@ -57,46 +59,80 @@ class Cart():
         """
         Delete all items in the shopping cart
         """
-        self.shopping_cart.clear()
+        self.shopping_cart["items"].clear()
+        self.recalculate_cart
 
 
     @property
-    def check_item_inventory(self):
-        """
-        Method that verifies the count from the inventory and the count 
-        that the user want to buy.
-        If needed adjusts the shopping cart to reflect the actual count in the inventory
-        and informs the use about the readjustment
-        """
-        for item in self.list_items():
-
-            print(item)
-
-
-
-    def add_item(self, item_id, count=1):
-        """
-        Add an item and its price to the shopping cart
-        """
-        if count > 0:
-            inventory = Inventory()
-            item = inventory.product(item_id)
-
-            for cart in self.shopping_cart:
-                if cart["product_id"] == item_id:
-                    cart["count"] += count
-                    break
-
-            else:
-                if item:
-                    self.shopping_cart.append({"product_id": item_id, "price": item[0]["price"], "count": count})
-
-
     def list_items(self):
         """
         List all items in the shopping cart
         """
-        return self.shopping_cart
+        return self.shopping_cart["items"]
+    
+
+    @property
+    def recalculate_cart(self):
+        pass
+
+
+    def add_item(self, product_id, count=1):
+        """
+        Add a product to the shopping cart
+        """
+        if not isinstance(product_id, int):
+            return False, "not a valid product id"
+
+        if count < 1:
+            return False, "only positive number of products can be ordered"
+
+        inventory = Inventory()
+        product = inventory.product(product_id)
+
+        print(product)
+
+        if not product:
+            return False, "product not found"
+        
+        product = product[0]
+        
+        product_stock_enough = True
+
+        if product["stock"] < count:
+            product_stock_enough = False
+            count = product["stock"]
+
+        if count == 0:
+            return False, "no product stock found"
+
+        else:
+
+            for item in self.list_items:
+                if item["product_id"] == product_id:
+                    if item["count"] +count > product["stock"]:
+                        count = product["stock"] -item["count"]
+
+                    item["count"] = count
+                    item["price"] = product["price"]                        # Update the price just in case
+                    item["total_price"] = item["count"] * product["price"] 
+                    break
+
+            else:
+                self.shopping_cart["items"].append({"product_id": product_id, 
+                                                    "price":product["price"], 
+                                                    "count": count, 
+                                                    "total_price": count * product["price"]
+                                                    })
+
+        if not product_stock_enough:
+            return product_stock_enough, "the count for the cart has changed"
+        
+        return True, "product added to the cart"
+
+
+        
+
+
 
 
     def remove_item(self, item_id):
@@ -113,7 +149,7 @@ class Cart():
                 cart["count"] -= 1
 
             elif cart["product_id"] == item_id and cart["count"] == 1:
-                remove_item = i
+                 remove_item = i
 
         if remove_item:
             self.shopping_cart.pop(remove_item -1)
@@ -122,12 +158,14 @@ class Cart():
 if __name__ == "__main__":
 
     c = Cart()
-    c.add_item(124)
-    c.add_item(124, 10)
-    c.add_item(124)
+    print(c.is_empty)
+
+    resp = c.add_item(124)
+
+    print(resp)
+
+    # HERE I AM
 
     print(c.is_empty)
 
-    c.check_item_inventory
-
-    print("Wrong file")
+    #print("Wrong file")

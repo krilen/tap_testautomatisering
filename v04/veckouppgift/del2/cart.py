@@ -3,10 +3,10 @@ from products import Products
 class Cart():
     """
     A class to handle a shopping cart.
-    it has to main methods
+    it has two main methods
      * 'add_item': Adds an item to the cart
      * 'remove_item': Removes an item from the cart
-    To this there are a lot of getters methods that does or return things
+    To this there are other methods and a lot of getters methods that does theing or return things
     """
     def __init__(self):
         """

@@ -1,9 +1,10 @@
-from behave import given, when, then
+from behave import given, when, then  #, register_type, use_step_matcher
 
 from cart import Cart
 from products import Products
 from user import User
 
+#import parse
 
 @given(u'that a shopping cart is present')
 def step_given__shopping_cart_present(context):
@@ -175,15 +176,52 @@ def step_then__user_infromed_by_count_change(context):
             # Adding to the cart was successful
             else:
                 assert (len(each_item[2]) == 0), "The message about the inventory was NOT empty"  
+
+
+# login
+@when(u'the user submits login credentials {username} and {password}')
+def step_when__login_credentials_is_given(context, username, password):
+    context.user = User()
+    
+    def parse_empty_string(v):
+        if v == '""':
+            return None
+        else:
+            return v[1:-1]
         
+    context.user.login_username = parse_empty_string(username)
+    context.user.login_password = parse_empty_string(password)
+    
+    print("Collecting the username and password")
+
 
 # login
-@when(u'the user submits login credentials ({username:w} and {password:w}) and presse the logn button')
-def step_when__submitting_login_credentials(context, user, password):
-    pass
+@when(u'then the login is submitted')
+def step_when__login_is_submitted(context):
+    context.user.login_missing = []
+    
+    if context.user.login_username == None:
+        context.user.login_missing.append("")
 
-# login
-@then(u'a message will inform about the status of the login')
-def step_then__login_message_informs_the_user(context):
-    pass
+    else:
+        context.user.login_missing.append(context.user.login_username)
+    
+    if context.user.login_password == None:
+        context.user.login_missing.append("")
 
+    else:
+        context.user.login_missing.append(context.user.login_password)
+        
+    print("Verifying the content of the username and password", context.user.login_missing)
+
+
+#login
+@then(u'the login is checked if it is {valid:d}')
+def step_then__the_is_validated(context, valid):
+    
+    login_status = context.user.login(context.user.login_missing[0], context.user.login_missing[1])
+    
+    if valid:
+        assert login_status is True, "Login status is NOK"
+    else:
+        assert login_status is False, "Login status is OK"

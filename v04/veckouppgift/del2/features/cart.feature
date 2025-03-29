@@ -3,7 +3,7 @@ Feature: Handle shopping cart
 
 
     # Adds an item to the cart and verifies that that cart is not empty
-
+    @slow
     Scenario: The user should be able to add items to a shopping cart
         Given that a shopping cart is present
         And the user can see that the shopping cart is empty
@@ -13,7 +13,7 @@ Feature: Handle shopping cart
 
     # Adds an item to the cart and removes the item 
     # to verify that tha cart is now empty
-    
+    @slow
     Scenario: The user should be able to remove items from the shopping cart
         Given that a shopping cart is present
         When the user places the item in the shopping cart
@@ -24,7 +24,7 @@ Feature: Handle shopping cart
     # Adds 3 items (same product) to the cart and removes 1 item
     # verifies that the cart is not empty and clears the cart
     # then verifies that the cart is now empty
-
+    @slow
     Scenario: The user should be able to remove a single item and then the rest of the items from the shopping cart
         Given that a shopping cart is present
         When the user places the item in the shopping cart
@@ -38,7 +38,7 @@ Feature: Handle shopping cart
 
     # Adds different count of items (also 0 or negative amounts)
     # Verifies the number of total items and the correct amount to pay
-
+    @slow
     Scenario Outline: The user should always be able to see the number of items in the cart and the total amount to pay
         Given that a shopping cart is present
         When user adds items: <items> of different count of: <count> to the shopping cart
@@ -55,7 +55,7 @@ Feature: Handle shopping cart
 
     # Adding the same item several times with count
     # Verifies that the number count for the item increase
-
+    @slow
     Scenario Outline: The user adds an item that already exists in the shopping cart the count of that item should increase
         Given that a shopping cart is present
         When user adds items: <items> of different count of: <count> to the shopping cart
@@ -72,7 +72,7 @@ Feature: Handle shopping cart
 
 
     # Adding items to the cart and verify that all can be removed at once
-
+    @slow
     Scenario Outline: The user chooses to remove all of the items in the shopping cart
         Given that a shopping cart is present
         When user adds items: <items> of different count of: <count> to the shopping cart
@@ -86,8 +86,9 @@ Feature: Handle shopping cart
             | 124,125     | 10,40,10 |
             | 124,124     | 2000,1   |
 
-    # Verifying when the user adds more than 3 items a discount of 10%
 
+    # Verifying when the user adds more than 3 items a discount of 10%
+    @slow
     Scenario Outline: If the user buys more than 3 items a discount of 10% on the whole amount should be added
         Given that a shopping cart is present
         When user adds items: <items> of different count of: <count> to the shopping cart
@@ -104,7 +105,7 @@ Feature: Handle shopping cart
 
 
     # Verifying when the user adds more than the inventory has the actual count is only added to the cart
-
+    @slow
     Scenario Outline: The user buys items and the request number (count) is verified against the inventory and modified if needed and inform the user
         Given that a shopping cart is present        
         When user adds items: <items> of different count of: <count> to the shopping cart
@@ -123,17 +124,17 @@ Feature: Handle shopping cart
  
 
     # Verify that the user must login with vaild credentials before a order can be done
-    Scenario Outline: The user buys items and the request number (count) is verified against the inventory and modified if needed and inform the user
-        Given that a shopping cart is present       
-        When the user places the item in the shopping cart
-        Then the user can see that the shopping cart is not empty
-        When the user submits login credentials ("<username>" and "<password>") and presses the login button
-        Then a message will inform about the status of the login
+    
+    Scenario Outline: The user needs to login before an order can be submitted
+        Given that a shopping cart is present
+        When the user submits login credentials "<username>" and "<password>"
+        And then the login is submitted 
+        Then the login is checked if it is <valid>
 
         Examples:
-            | username    | password   | 
-            | john        |            | 
-            |             | mypass     | 
-            |             |            | 
-            | mary        | 12345      | 
-            | john        | mypass     |
+            | username    | password   | valid |
+            | john        |            | 0     |
+            |             | mypass     | 0     |
+            |             |            | 0     |
+            | mary        | 12345      | 0     |
+            | john        | mypass     | 1     |

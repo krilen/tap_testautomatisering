@@ -34,4 +34,66 @@ Tips: Här är nuvarande funktionalitet:
 
 Efter hand som du skriver kod, försök abstrahera funktioner till Pages-filer. Använd gärna "Page Object" modellen, där funktionerna finns inuti en klass.
 
-.
+---
+
+## Lösning
+
+### Intryck
+
+ - sidan består av en header och main. header: rubrik och 3 länkar, main: här visa informationen
+ - startknappen tar en till huvudsidan 
+ - vänlistan tar en till en lista med 5 personer som har namn och epost
+ - sökfältet söker på allt både namn och epost
+ - ändra på en vän dock måste båda fälten vara ifyllda utan att varnings meddelande dyker upp sam knappen aktiv
+ - att lägga till en "Ny vän" går inte att göra utan at lägga till båda fälten endast då blir spara knappen aktiv
+ - ta bort anändare vi knappen 
+ - ...
+
+
+### User stories
+
+**US01**  
+som en användare  
+vill jag kunna komma åt sidan  
+så att jag kan se vad jag kan göra
+ 
+**US02**  
+som en användare  
+vill jag kunna komma åt sidan  
+så jag har möjlighet att se start, vänlista och ny vän länk
+
+**US03**  
+som en användare  
+vill jag kunna se i min vänlista  
+så jag kan se vilka vänner jag har
+
+**US04**  
+som en användare  
+vill jag kunna ändra min väns namn  
+så jag håller informationen uppdaterad
+
+**US05**  
+som en användare  
+vill jag kunna ändra min väns epost  
+så jag håller informationen uppdaterad
+
+**US06**  
+som en användare  
+vill jag kunna ta bort en vän  
+så att min lista av vänner minskas
+
+**US07**  
+som en användare  
+vill jag kunna ta bort alla mina vänner  
+så att min lista av vänner blir tom  
+
+**US08**  
+som en användare  
+vill jag kunna söka upp en vän  
+så att snabbt får fram vännens uppgifter
+
+**US09**  
+som en användare  
+vill jag kunna lägga till vän  
+så att min lista av vänner ökar
+

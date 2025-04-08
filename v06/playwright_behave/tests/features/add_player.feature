@@ -5,10 +5,11 @@
 Feature: Add name to players
 
     Scenario: Add two players
+        Given player is on on the startpage
         When player clicks on the button "Lägg till spelare"
-        And playes adds the name "David" in the inputfield
+        And player adds the name "{David}" in the inputfield
         And player clicks on the button "Lägg till spelare"
-        Then "David" shows up on the pages with the text "0:00.0"
-        When playes adds the name "Goliat" in the inputfield
+        Then "{David}" shows up on the pages with the text "0:00.0"
+        When player adds the name "{Goliat}" in the inputfield
         And player clicks on the button "Lägg till spelare"
-        Then "Goliat" shows up on the pages with the text "0:00.0"
+        Then "{Goliat}" shows up on the pages with the text "0:00.0"

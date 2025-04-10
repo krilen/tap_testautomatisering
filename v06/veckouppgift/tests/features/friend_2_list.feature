@@ -1,5 +1,6 @@
 Feature: View list webpage for my friends
 
+
 # US05  
 # som en användare  
 # vill jag säkerställa att jag är på sidan för vänlista
@@ -29,5 +30,5 @@ Feature: View list webpage for my friends
 
     Scenario: Count the number of friends
         Given access to the list webpage
-        When I can count the number of friends
-        Then I can remove them all 
+        Then I can count the number of friends
+        And I can remove them all 

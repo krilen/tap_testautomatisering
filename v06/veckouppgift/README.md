@@ -94,38 +94,37 @@ så jag kan ta bort dem alla och börja om.
 
 #### Ny vän
 
-**USxx**
-som en användare
-vill jag kunna lägga till en vän
+**US08**  
+som en användare  
+vill jag säkerställa att jag är på sidan för att lägga till en vän  
+och att "spara" knappen inte är aktiv  
+så att jag vet säker på var jag är.
+
+**US09**  
+som en användare  
+vill jag kunna lägga till en vän  
 så att min lista över vänner ökar med 1
 
-**USxx**  
+**US10**  
 som en användare  
-vill säkerställa att all information läggs till  
-så att en vän kan läggas till <---- endast namn sedan epost och sedan båda Senario outline
+vill säkarställa att all information (alla fält skrivs in)  
+så att en vän då endast läggs till.
 
 #### Kombo
 
-**USxx**  
+**US11**  
 som en användare  
-vill jag kunna ändra min väns namn  
-så jag håller informationen uppdaterad.
-
-**USxx**  
-som en användare  
-vill jag kunna ändra min väns epost  
+vill jag kunna ändra min väns information  
 så jag håller informationen uppdaterad
+
+**US12**  
+som en användare  
+vill jag kunna söka upp en vän  
+så att snabbt får fram vännens uppgifter
 
 **USxx**  
 som en användare  
 vill jag kunna ta bort en vän  
 så att min lista av vänner minskas
-
-**USxx**  
-som en användare  
-vill jag kunna söka upp en vän  
-så att snabbt får fram vännens uppgifter
-
-### Navigering på sidan
 
 ...

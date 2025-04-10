@@ -1,12 +1,12 @@
 from behave import given, when, then
 from playwright.sync_api import expect
 
-from pages.friend_start import FriendStart
+from pages.friend import Friend
 
 
 @given(u'access to the start webpage')
-def step_given__access_to_friend_page(context):
-    context.friend = FriendStart(context.page)
+def step_given__access_to_friend_start_page(context):
+    context.friend = Friend(context.page)
     context.page.goto(context.friend.url_start)
 
 
@@ -37,4 +37,4 @@ def step_when__verify_link_for_page_is_active(context, text):
 
 @then(u'I can verify that I am on the start page')
 def step_then__verify_the_start_page_is_shown(context):
-    expect(context.friend.verify_page()).to_be_visible(timeout=200)
+    expect(context.friend.verify_start_page).to_be_visible(timeout=200)

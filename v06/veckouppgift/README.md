@@ -70,16 +70,16 @@ så att jag vet att ingen förändring har gjorts.
 
 **US04**  
 som en användare  
-vill jag säkerställa att jag är på start sidan
-och att "start" länken är aktiv (skiljer sig åt)
+vill jag säkerställa att jag är på start sidan  
+och att "start" länken är aktiv (skiljer sig åt)  
 så att jag vet säker på var jag är.
 
 #### Vänlista
 
 **US05**  
 som en användare  
-vill jag säkerställa att jag är på sidan för vänlista
-och att "vänlista" länken är aktiv (skiljer sig åt)
+vill jag säkerställa att jag är på sidan för vänlista  
+och att "vänlista" länken är aktiv (skiljer sig åt)  
 så att jag vet säker på var jag är.
 
 **US06**  
@@ -117,8 +117,8 @@ som en användare
 vill jag kunna ändra min väns information  
 så jag håller informationen uppdaterad
 
-**US13**
-som en användare
+**US13**  
+som en användare  
 vill jag säkarställa att all information (alla fält skrivs in)  
 så att en vän endast då kan uppdateras
 

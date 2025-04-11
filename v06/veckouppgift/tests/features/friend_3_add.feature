@@ -27,7 +27,7 @@ Feature: Add friends
 
 # US10  
 # som en användare  
-# vill säkarställa att all information (alla fält skrivs in)  
+# vill jag säkarställa att all information (alla fält skrivs in)  
 # så att en vän då endast läggs till.
 
     Scenario Outline: Verify fields before adding friend

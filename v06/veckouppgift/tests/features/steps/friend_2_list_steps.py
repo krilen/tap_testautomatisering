@@ -24,10 +24,3 @@ def step_then__count_the_number_of_friends(context):
     assert context.friend.count_friends >= 0
 
 
-@then(u'I can remove them all')
-def step_then__remove_all_friends(context):
-    context.friend.remove_friends
-    
-    assert context.friend.count_friends == 0
-
-

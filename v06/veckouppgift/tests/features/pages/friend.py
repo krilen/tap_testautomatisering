@@ -74,10 +74,11 @@ class Friend():
         return self.list_section.locator(".friend").count()
 
 
+    # --- REMOVE FRIENDS PAGE ---
+
     def remove_friend(self, index):
         self.page.goto(self.url_list)
         self.list_section.locator(".friend").nth(index).get_by_role("button").nth(1).click(timeout=200)
-
 
     @property
     def remove_friends(self):
@@ -117,7 +118,6 @@ class Friend():
         main.get_by_role("button").click(timeout=200)
         
         
-        
     def verify_add_friend(self, name, email):
         user_info = []
     
@@ -145,3 +145,38 @@ class Friend():
         
         
     # --- MODIFY FRIENDS ---
+    
+    def modify_friend(self, change_from, change_to):
+        
+        _, main = self.page_parts(self.page)
+        
+        found = False
+
+        try:
+            main.get_by_text(re.compile(change_from)).locator("..").get_by_role("button").first.click(timeout=200)
+            found = True
+            
+        except:
+            pass
+        
+        if found:
+            for i, f in enumerate(self.page.locator("main").get_by_role("textbox").all(), start=0):
+
+                if change_from == f.input_value():
+                    self.page.locator("main").get_by_role("textbox").nth(i).fill(change_to)
+                    self.page.locator("main").get_by_role("button").click(timeout=200)
+                    break
+                
+                
+    def verify_modify_friend(self, change_name, change_email):
+        
+        self.page.goto(self.url_list)
+        
+        _, main = self.page_parts(self.page)
+
+        main.locator("section").locator(".friend").nth(0).get_by_role("button").nth(0).click(timeout=200)
+        
+        self.page.locator("section").get_by_role("textbox").nth(0).fill(change_name)
+        self.page.locator("section").get_by_role("textbox").nth(1).fill(change_email)
+        
+        return self.page

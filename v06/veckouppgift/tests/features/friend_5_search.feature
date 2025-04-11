@@ -6,7 +6,7 @@ Feature: Search friends
 # så att snabbt får fram vännens uppgifter
 
 
-    Scenario: Modify friends information
+    Scenario: Search after friends
         Given access to the list webpage
         Then I can remove them all 
         When I add a friend

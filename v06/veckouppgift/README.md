@@ -107,24 +107,36 @@ så att min lista över vänner ökar med 1
 
 **US10**  
 som en användare  
-vill säkarställa att all information (alla fält skrivs in)  
+vill jag säkarställa att all information (alla fält skrivs in)  
 så att en vän då endast läggs till.
 
-#### Kombo
+#### Ändra vän
 
 **US11**  
 som en användare  
 vill jag kunna ändra min väns information  
 så jag håller informationen uppdaterad
 
+**US13**
+som en användare
+vill jag säkarställa att all information (alla fält skrivs in)  
+så att en vän endast då kan uppdateras
+
+#### Söka upp vän
+
 **US12**  
 som en användare  
 vill jag kunna söka upp en vän  
 så att snabbt får fram vännens uppgifter
 
-**USxx**  
+#### Ta bort vän
+
+**US14**  
 som en användare  
 vill jag kunna ta bort en vän  
-så att min lista av vänner minskas
+så att min lista av vänner minskas med 1
 
-...
+**US15**  
+som en användare  
+vill jag kunna ta bort alla vänner  
+så att min lista är tom

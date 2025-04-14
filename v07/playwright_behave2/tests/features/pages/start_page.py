@@ -23,9 +23,8 @@ class StartPage():
     
     
     def button_to_add_player(self):
-        return self.page.get_by_role("button").get_by_text(re.compile("lägg till spelare", re.IGNORECASE))
+        return self.page.get_by_role("button", name=re.compile("lägg till spelare", re.IGNORECASE))
 
 
     def form_click_hide(self):
-        _name = re.compile("dölj", re.IGNORECASE)
-        self.page.get_by_role("button", name=_name).click(timeout=200)
+        self.page.get_by_role("button", name=re.compile("dölj", re.IGNORECASE)).click(timeout=200)

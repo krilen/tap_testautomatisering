@@ -49,6 +49,10 @@ Efter hand som du skriver kod, försök abstrahera funktioner till Pages-filer. 
 - ta bort anändare vi knappen
 - ...
 
+### Execute 'behave'
+
+I mappen tests körs 'behave'
+
 ### User stories
 
 #### Start

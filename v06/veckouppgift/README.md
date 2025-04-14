@@ -51,7 +51,7 @@ Efter hand som du skriver kod, försök abstrahera funktioner till Pages-filer. 
 
 ### Execute 'behave'
 
-I mappen tests körs 'behave'
+I mappen "tests/" körs 'behave'
 
 ### User stories
 

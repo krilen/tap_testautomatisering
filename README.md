@@ -20,5 +20,5 @@ Veckouppgift
 
 ### Vecka 6, 7/4
 First playwrtight with behave  
-Exemple på att använda playwright och behave  
+Exempel på att använda playwright och behave  
 Veckouppgift  

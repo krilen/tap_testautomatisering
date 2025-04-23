@@ -1,9 +1,8 @@
 # Veckouppgift CI/CD
 ## Vecka 8 i Testautomatisering och testverktyg
 
-### Frågor
-1. Beskriv ett CI/CD-flöde för ett tänkt projekt (till exempel en Flask-app eller
-webbtjänst).
+### Uppgift
+1. Beskriv ett CI/CD-flöde för ett tänkt projekt (till exempel en Flask-app eller webbtjänst).
    a. Vad händer när utvecklaren pushar kod?  
    b. Vilka tester ska köras?  
    c. När och hur byggs applikationen?  
@@ -18,4 +17,6 @@ webbtjänst).
    (denna gör du bara om du har erfarenhet från andra CI/CD-verktyg).
    
 ### Svar
-1. När en commit görs på utvecklarens lokala dator och som sedan "push:as" upp till err _remote_ repository triggas ...
+När utvecklaren en commit görs på utvecklarens lokala dator och som sedan "push:as" upp till ett _remote_ repository triggas ...
+
+

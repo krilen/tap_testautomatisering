@@ -1,4 +1,4 @@
-## Testautomatisering och Testverktyg
+# Testautomatisering och Testverktyg
 
 ### Vecka 1, 3/3
 Veckouppgift  
@@ -19,6 +19,13 @@ Veckouppgift
 Veckouppgift  
 
 ### Vecka 6, 7/4
-First playwrtight with behave  
+First playwright with behave  
 Exempel på att använda playwright och behave  
+Veckouppgift  
+
+### Vecka 7, 14/4
+Fortsättning på behave och playwright  
+Skiljer sig åt pga sjukdom hos läraren.  
+
+### Vecka 8, 22/4
 Veckouppgift  

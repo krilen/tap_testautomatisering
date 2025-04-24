@@ -1,6 +1,8 @@
 # Veckouppgift CI/CD
 ## Vecka 8 i Testautomatisering och testverktyg
 
+**Krister Lenberg, 2025apr24**
+
 ### Uppgift
 1. Beskriv ett CI/CD-flöde för ett tänkt projekt (till exempel en Flask-app eller webbtjänst).
    a. Vad händer när utvecklaren pushar kod?  

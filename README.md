@@ -29,3 +29,9 @@ Skiljer sig åt pga sjukdom hos läraren.
 
 ### Vecka 8, 22/4
 Veckouppgift  
+
+### Vecka 9, 28/4
+Ingen kod denna vecka  
+Ingen veckouppgift heller  
+David delat ut inlämningsuppgiftern för denna kurs  
+ 
